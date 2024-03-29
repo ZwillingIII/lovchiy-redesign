@@ -1,0 +1,23 @@
+extends ../layout/main.pug
+
+append variables
+  - var title = 'Главная';
+
+block content
+  main.main
+    include ../components/Banner.pug
+    include ../components/MainSections.pug
+    include ../components/NewsProducts.pug
+    include ../components/DiscountsProducts.pug
+    include ../components/Stocks.pug
+    include ../components/News.pug
+    include ../components/FooterSlider.pug
+
+append styles
+  +style('index.css')
+  +style('banner.css')
+  +style('MainSections.css')
+  +style('NewsProducts.css')
+  +style('Stocks.css')
+  +style('News.css')
+  +style('FooterSlider.css')

@@ -1,0 +1,35 @@
+@import "variables/vars"
+
+.main-sections
+  margin-top: 20px
+  &__items
+    overflow: hidden
+  &__item
+    position: relative
+    width: 190px
+    height: 220px
+    border-radius: 6px
+    display: flex
+    justify-content: center
+    align-items: center
+    &:nth-child(1n)
+      background-color: #e1f5fd
+    &:nth-child(2n)
+      background-color: #d7ddeb
+    &:nth-child(3n)
+      background-color: #dfeef3
+    &:nth-child(4n)
+      background-color: #caeae9
+    &:nth-child(5n)
+      background-color: #d7dbde
+    &:nth-child(6n)
+      background-color: #fee8e8
+    img
+      width: 100%
+    &-name
+      position: absolute
+      bottom: 20px
+      font-weight: 500
+      font-size: 18px
+      text-align: center
+      color: $black

@@ -1,0 +1,112 @@
+.header
+  &-location
+    position: relative
+    border-bottom: 1px dashed $white
+    &:before
+      content: ""
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgb3BhY2l0eT0iLjUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiPjxwYXRoIGQ9Ik0xOC4yNSAxMWMwIC44Mi0uMjcgMS44MTgtLjc0NyAyLjg4Ny0uNDc0IDEuMDYtMS4xMzIgMi4xNDMtMS44NTUgMy4xMTUtLjcyNC45NzQtMS40OTggMS44MTctMi4xOTUgMi40MDdhNS41MzggNS41MzggMCAwMS0uOTMxLjY1OGMtLjI3OS4xNS0uNDQ4LjE4My0uNTIyLjE4My0uMDc0IDAtLjI0My0uMDM0LS41MjItLjE4M2E1LjUzOCA1LjUzOCAwIDAxLS45My0uNjU4Yy0uNjk4LS41OS0xLjQ3Mi0xLjQzMy0yLjE5Ni0yLjQwNy0uNzIzLS45NzItMS4zOC0yLjA1NC0xLjg1NS0zLjExNUM2LjAyIDEyLjgxNyA1Ljc1IDExLjgyIDUuNzUgMTFhNi4yNSA2LjI1IDAgMTExMi41IDB6Ii8+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMSIgcj0iMi4yNSIvPjwvZz48L3N2Zz4=')
+      position: absolute
+      width: 24px
+      height: 24px
+      left: -27px
+      top: -4px
+  &-phone
+    font-weight: 600
+    font-size: 16px
+  &-top
+    background-color: $black
+    color: $white
+    font-size: 14px
+    &__wrap
+      display: flex
+      justify-content: space-between
+      align-items: center
+      gap: 30px
+      padding: 15px 0
+    &__left
+      display: flex
+      align-items: center
+      gap: 75px
+    &__locations
+      display: flex
+      gap: 40px
+    &__menu
+      display: flex
+      gap: 22px
+      &-link
+        transition: all .3s
+        &:hover
+          color: $btn-orange
+        &.drop
+          position: relative
+          padding-right: 18px
+          &:before
+            content: ""
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgNkw3IDlMMTAgNiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K')
+            width: 14px
+            height: 14px
+            position: absolute
+            right: 0
+    &__contacts
+      display: flex
+      gap: 40px
+  &-bottom
+    padding: 4px 0 8px 0
+    box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.06)
+    font-size: 16px
+    &__cart
+      &-count
+        background-color: $btn-orange
+        border-radius: 100%
+        padding: 4px 1px
+        font-size: 11px
+        text-align: center
+        font-weight: 600
+        position: absolute
+        top: -5px
+        right: -10px
+    &__right
+      display: flex
+      gap: 22px
+      &-item
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        gap: 6px
+        padding: 13px 10px
+    &__wrap
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__center
+      display: flex
+      gap: 20px
+      align-items: center
+  &__search
+    display: flex
+    align-items: center
+    position: relative
+    &-input
+      font-size: 16px
+      padding: 15px
+      width: 530px
+      border-radius: 3px
+      border: 1px solid #d1d2d4
+    &-btn
+      position: absolute
+      right: 0
+      padding: 17px
+  &__catalog
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 6px
+    &-burger
+      display: flex
+      flex-direction: column
+      gap: 5px
+      &_line
+        background-color: $black
+        height: 2px
+        width: 19px

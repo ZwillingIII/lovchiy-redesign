@@ -1,0 +1,24 @@
+-
+  var slides = [
+    'assets/images/other/footer/slide.png',
+    'assets/images/other/footer/slide.png',
+    'assets/images/other/footer/slide.png',
+  ]
+
+.footer-slider
+  .container
+    .footer-slider__wrap
+      .footer-slider__title Магазин «Ловчий»
+      .footer-slider__description Магазин «Ловчий» открылся в 2009 году. К настоящему времени магазин по праву завоевал доверие тысяч покупателей Чувашии и России: как простых любителей рыбалки и охоты, так и настоящих профессионалов. В магазине представлен огромный ассортимент товаров для рыбалки, охоты, туризма и активного отдыха.
+      .footer-slider__block
+        .footer-slider__slider
+          .swiper-wrapper
+            each item in slides
+              .footer-slider__item.swiper-slide
+                img(src=item)
+        .footer-slider__pagination
+        .footer-slider__navs
+          .footer-slider__navs-next.swiper-button-next
+            img(src="assets/images/other/slide-next.svg")
+          .footer-slider__navs-prev.swiper-button-prev
+            img(src="assets/images/other/slide-prev.svg")

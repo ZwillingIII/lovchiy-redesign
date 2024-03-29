@@ -1,0 +1,233 @@
+@import "variables/vars"
+@import "fonts"
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+
+body
+  font-family: "Onest", sans-serif
+  font-size: 16px
+  line-height: 1.25
+  display: flex
+  flex-direction: column
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  background-color: #f8f8f8
+
+
+html,
+body
+  min-height: 100%
+  height: 100%
+
+
+input,
+button,
+textarea,
+select
+  font-family: inherit
+  outline: none
+  border: none
+  background-color: transparent
+
+
+img
+  max-width: 100%
+  display: block
+
+
+a
+  text-decoration: none
+  font-size: inherit
+
+
+.content
+  flex: 1 0 auto
+
+.container
+  max-width: 1390px
+  padding: 0 30px
+  margin: 0 auto
+  position: relative
+
+.btn
+  padding: 15px 35.5px
+  background-color: $btn-orange
+  color: $black
+  transition: all .3s
+  border-radius: 3px
+  font-weight: 600
+  font-size: 16px
+  display: inline-block
+  &.disabled
+    background-color: #eaeaea
+    color: #737373
+    font-weight: 500
+    &:hover
+      background-color: #eaeaea
+  &:hover
+    background-color: $text-orange
+
+.trans-btn
+  padding: 15px 35.5px
+  background-color: transparent
+  color: $black
+  border: 1px solid $black
+  transition: all .3s
+  border-radius: 3px
+  font-weight: 400
+  font-size: 16px
+  display: inline-block
+  &:hover
+    background-color: $btn-orange
+    border: 1px solid $btn-orange
+    color: $white
+
+.swiper-pagination-bullet
+  width: 6px
+  height: 6px
+  background-color: $white
+  opacity: .3
+  border-radius: 100%
+  z-index: 4
+  &-active
+    opacity: 1
+
+.swiper-button-next,
+.swiper-button-prev
+  width: 40px
+  height: 40px
+  border-radius: 100%
+  background-color: rgb(255,255,255, .2)
+  display: flex
+  justify-content: center
+  align-items: center
+  &:after
+    content: ""
+    width: 40px
+    height: 40px
+    display: none
+
+.product-card
+  padding: 15px 15px
+  position: relative
+  height: 456px
+  border: 1px solid #eaeaea
+  border-radius: 6px
+  background-color: $white
+  &__top
+    position: absolute
+    display: flex
+    justify-content: space-between
+    z-index: 2
+    top: 15px
+    right: 15px
+    left: 15px
+  &__favorite
+    padding: 2px
+    transition: all .3s
+    &.active
+      svg
+        path
+          fill: #ff3b3b
+  &__img
+    img
+      width: 100%
+      box-sizing: border-box
+  &__stock
+    display: flex
+    align-items: center
+    gap: 5px
+    margin-top: 10px
+    font-weight: 400
+    font-size: 12px
+    line-height: 130%
+    color: #737373
+    img
+      width: 14px
+      height: 14px
+  &__labels
+    display: flex
+    flex-direction: column
+    gap: 5px
+  &__new
+    padding: 3px 5px
+    background: #fcb514
+    border-radius: 3px
+    font-weight: 600
+    font-size: 14px
+    color: $white
+  &__discount
+    width: 44px
+    padding: 3px 5px
+    background: #e60303
+    border-radius: 3px
+    font-weight: 600
+    font-size: 14px
+    color: $white
+  &__bottom
+    position: absolute
+    bottom: 15px
+    right: 15px
+    left: 15px
+  &__price
+    display: flex
+    gap: 8px
+    align-items: flex-end
+    &-old
+      font-weight: 400
+      font-size: 14px
+      line-height: 130%
+      text-decoration: line-through
+      color: #737373
+    &-new
+      font-weight: 600
+      font-size: 18px
+      line-height: 130%
+      color: #e60303
+    &-standard
+      font-weight: 600
+      font-size: 18px
+      line-height: 130%
+      color: #0f0f0f
+  &__points
+    display: flex
+    align-items: center
+    gap: 5px
+    &-logo
+      font-size: 9px
+      color: $white
+      padding: 2.8px 4.2px
+      background-color: #6D21CE
+      border-radius: 100%
+      width: 14px
+      height: 14px
+    &-val
+      font-weight: 400
+      font-size: 14px
+      line-height: 130%
+      color: #6d21ce
+  &__btn
+    padding: 10px 17px
+    text-align: center
+    width: 100%
+    margin-top: 10px
+
+.section-top
+  display: flex
+  gap: 40px
+  align-items: flex-end
+  &__title
+    font-weight: 600
+    font-size: 30px
+    color: #000
+  &__link
+    font-weight: 400
+    font-size: 16px
+    color: #737373
+
+.bg-grey
+  background-color: #e8e8e8

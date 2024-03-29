@@ -1,0 +1,66 @@
+-
+    var sections = [
+        {
+            img: 'assets/images/other/sections/1.png',
+            title: 'Рыбалка'
+        },
+        {
+            img: 'assets/images/other/sections/2.png',
+            title: 'Охота'
+        },
+        {
+            img: 'assets/images/other/sections/3.png',
+            title: 'Одежда и обувь'
+        },
+        {
+            img: 'assets/images/other/sections/4.png',
+            title: 'Лодки и моторы'
+        },
+        {
+            img: 'assets/images/other/sections/5.png',
+            title: 'Туризм и отдых'
+        },
+        {
+            img: 'assets/images/other/sections/6.png',
+            title: 'Мёд, чай'
+        },
+        {
+            img: 'assets/images/other/sections/1.png',
+            title: 'Рыбалка'
+        },
+        {
+            img: 'assets/images/other/sections/2.png',
+            title: 'Охота'
+        },
+        {
+            img: 'assets/images/other/sections/3.png',
+            title: 'Одежда и обувь'
+        },
+        {
+            img: 'assets/images/other/sections/4.png',
+            title: 'Лодки и моторы'
+        },
+        {
+            img: 'assets/images/other/sections/5.png',
+            title: 'Туризм и отдых'
+        },
+        {
+            img: 'assets/images/other/sections/6.png',
+            title: 'Мёд, чай'
+        },
+    ];
+
+.main-sections
+    .container
+        .main-sections__wrap
+            .main-sections__items
+              .swiper-wrapper
+                each section in sections
+                    .main-sections__item.swiper-slide
+                        img(src=section.img)
+                        .main-sections__item-name= section.title
+            .main-sections__navs
+                .main-sections__prev.swiper-button-prev
+                    img(src="assets/images/other/slide-prev-black.svg")
+                .main-sections__next.swiper-button-next
+                    img(src="assets/images/other/slide-next-black.svg")
