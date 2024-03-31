@@ -5,7 +5,10 @@ const chalk = require("chalk");
 const browserSync = require("browser-sync");
 const uglify = require("gulp-uglify-es").default;
 
-const jsPlugins = ["node_modules/swiper/swiper-bundle.min.js"];
+const jsPlugins = [
+  "node_modules/swiper/swiper-bundle.min.js",
+  "node_modules/jquery/dist/jquery.js",
+];
 
 // * Задача для js плагинов
 module.exports = function jsPluginsFunc(done) {

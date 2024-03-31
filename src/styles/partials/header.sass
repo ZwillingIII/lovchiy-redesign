@@ -37,16 +37,6 @@
         transition: all .3s
         &:hover
           color: $btn-orange
-        &.drop
-          position: relative
-          padding-right: 18px
-          &:before
-            content: ""
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgNkw3IDlMMTAgNiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K')
-            width: 14px
-            height: 14px
-            position: absolute
-            right: 0
     &__contacts
       display: flex
       gap: 40px
@@ -102,11 +92,51 @@
     align-items: center
     justify-content: center
     gap: 6px
+    &.active
+      .header__catalog-burger
+        gap: 0
+      .header__catalog-burger_line:nth-child(2)
+        display: none
+      .header__catalog-burger_line:nth-child(1)
+        transform: rotate(225deg)
+        position: absolute
+      .header__catalog-burger_line:nth-child(3)
+        transform: rotate(135deg)
     &-burger
       display: flex
       flex-direction: column
       gap: 5px
+      transition: all .3s
+      position: relative
       &_line
         background-color: $black
         height: 2px
         width: 19px
+        transition: all .3s
+
+
+.drop
+  position: relative
+  padding-right: 18px
+  &:before
+    content: ""
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgNkw3IDlMMTAgNiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K')
+    width: 14px
+    height: 14px
+    position: absolute
+    right: 0
+    transition: all .3s
+  &-list
+    background-color: #0F0F0F
+    color: #ffffff
+    height: auto
+    width: 100%
+    position: absolute
+    padding: 5px
+    z-index: 9
+    display: flex
+    flex-direction: column
+    gap: 5px
+  &:hover
+    &:before
+      transform: rotate(180deg)
