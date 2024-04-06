@@ -32,6 +32,7 @@ select
   outline: none
   border: none
   background-color: transparent
+  cursor: pointer
 
 
 img
@@ -43,6 +44,7 @@ a
   text-decoration: none
   font-size: inherit
   transition: all .3s
+  cursor: pointer
   &:hover
     color: $btn-orange
 
@@ -65,6 +67,7 @@ a
   font-weight: 600
   font-size: 16px
   display: inline-block
+  text-align: center
   &.disabled
     background-color: #eaeaea
     color: #737373
@@ -73,6 +76,12 @@ a
       background-color: #eaeaea
   &:hover
     background-color: $text-orange
+    color: $black
+  @media (max-width: 550px)
+    font-size: 14px
+    padding: 10px 25px
+  @media (max-width: 390px)
+    font-size: 12px
 
 .trans-btn
   padding: 15px 35.5px
@@ -121,6 +130,18 @@ a
   border: 1px solid #eaeaea
   border-radius: 6px
   background-color: $white
+  @media (max-width: 1200px)
+    height: 430px
+  &__name
+    font-weight: 600
+    font-size: 16px
+    line-height: 130%
+    color: #0f0f0f
+    margin-top: 8px
+    @media (max-width: 450px)
+      font-size: 14px
+    @media (max-width: 390px)
+      font-size: 12px
   &__top
     position: absolute
     display: flex
@@ -191,6 +212,8 @@ a
       font-size: 18px
       line-height: 130%
       color: #e60303
+      @media (max-width: 450px)
+        font-size: 14px
     &-standard
       font-weight: 600
       font-size: 18px

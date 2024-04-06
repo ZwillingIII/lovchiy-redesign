@@ -5,13 +5,30 @@
   &-wrap
     display: flex
     justify-content: space-between
+    @media (max-width: 1300px)
+      flex-direction: column
+      gap: 20px
   &-banner
     position: relative
     width: 75%
     overflow: hidden
+    @media (max-width: 1300px)
+      width: 100%
     &__item
       height: 440px
       border-radius: 6px
+      @media (max-width: 1300px)
+        height: 500px
+      @media (max-width: 950px)
+        height: 420px
+      @media (max-width: 800px)
+        height: 380px
+      @media (max-width: 650px)
+        height: 350px
+      @media (max-width: 550px)
+        height: 250px
+      @media (max-width: 400px)
+        height: 200px
       &-shadow
         position: absolute
         top: 0
@@ -40,10 +57,20 @@
         display: flex
         flex-direction: column
         justify-content: flex-end
+        @media (max-width: 550px)
+          padding: 20px 30px
       &-title
         font-size: 42px
         font-weight: 700
         max-width: 470px
+        @media (max-width: 800px)
+          font-size: 38px
+        @media (max-width: 650px)
+          font-size: 30px
+        @media (max-width: 550px)
+          font-size: 20px
+        @media (max-width: 400px)
+          font-size: 14px
       &-btn
         margin-top: 20px
         width: 160px
@@ -57,6 +84,8 @@
     width: 20%
     background-color: #fff1e6
     border-radius: 6px
+    @media (max-width: 1300px)
+      width: 100%
     &__top
       padding: 30px 24px 40px 24px
     &__btn
@@ -68,6 +97,11 @@
     &__wrap
       position: relative
       height: 100%
+      @media (max-width: 1300px)
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
     &__bottom
       padding: 30px 24px 40px 24px
       position: relative
@@ -77,6 +111,8 @@
         bottom: -3px
         border-bottom-left-radius: 6px
         border-bottom-right-radius: 6px
+        @media (max-width: 1300px)
+          display: none
         svg
           border-bottom-left-radius: 6px
           border-bottom-right-radius: 6px

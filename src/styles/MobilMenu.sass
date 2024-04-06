@@ -1,0 +1,143 @@
+.mobil-menu
+  position: absolute
+  top: 130px
+  right: 0
+  left: 0
+  bottom: 0
+  z-index: 9
+  background-color: #ffffff
+  transform: translateX(-110%)
+  transition-duration: 0.3s
+  transition-timing-function: ease
+  transition-property: opacity, transform
+  overflow-y: auto
+  overflow-x: hidden
+  &::-webkit-scrollbar
+    width: 4px
+  &::-webkit-scrollbar-track
+    background: #EAEAEA
+  &::-webkit-scrollbar-thumb
+    background-color: #FBBC2B
+    border-radius: 20px
+  @media (max-width: 800px)
+    top: 112px
+  @media (max-width: 390px)
+    top: 92px
+  &__wrap
+    position: relative
+    z-index: 9
+  &.active
+    transform: translateX(0%)
+  &__top
+    display: flex
+    flex-direction: column
+    gap: 30px
+    padding: 14px 0 24px
+    border-bottom: 1px solid #e4e4e4
+  &__item
+    text-transform: uppercase
+    font-weight: 400
+    font-size: 16px
+    color: #0f0f0f
+    width: 25%
+    position: relative
+    @media (max-width: 800px)
+      width: 50%
+    @media (max-width: 500px)
+      width: 100%
+    &.internal
+      &:after
+        content: ''
+        position: absolute
+        background-image: url("../images/other/menu-arrow.svg")
+        background-repeat: no-repeat
+        width: 16px
+        height: 16px
+        right: 0
+  &__center
+    padding: 24px 0 20px
+    display: flex
+    gap: 20px
+    flex-direction: column
+    border-bottom: 1px solid #e4e4e4
+    &-item
+      display: flex
+      align-items: center
+      gap: 10px
+      font-weight: 400
+      font-size: 16px
+      color: #0f0f0f
+  &__contacts
+    padding: 20px 0 24px
+    &-phones
+      display: flex
+      flex-direction: column
+      gap: 16px
+    &-phone
+      font-weight: 600
+      font-size: 18px
+      color: #0f0f0f
+    &-soc
+      display: flex
+      flex-direction: column
+      gap: 16px
+      margin-top: 30px
+      &_items
+        display: flex
+        gap: 10px
+  &__internal
+    &-item
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      z-index: 10
+      background: #ffffff
+      transform: translateX(+110%)
+      transition-duration: 0.3s
+      transition-timing-function: ease
+      transition-property: opacity, transform
+      overflow: auto
+      &::-webkit-scrollbar
+        width: 4px
+      &::-webkit-scrollbar-track
+        background: #EAEAEA
+      &::-webkit-scrollbar-thumb
+        background-color: #FBBC2B
+        border-radius: 20px
+      &.active
+        transform: translateX(0)
+      &_section
+        font-weight: 400
+        font-size: 16px
+        color: #0f0f0f
+        &.internal
+          position: relative
+          &:after
+            content: ""
+            position: absolute
+            background-image: url(../images/other/menu-arrow.svg)
+            background-repeat: no-repeat
+            width: 16px
+            height: 16px
+            right: 0
+      &_sections
+        margin-top: 30px
+        display: flex
+        flex-direction: column
+        gap: 30px
+      &_title
+        text-align: center
+        font-weight: 400
+        font-size: 16px
+        text-transform: uppercase
+        color: #0f0f0f
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+          position: absolute
+          left: 0
+

@@ -1,4 +1,51 @@
 .header
+  @media(max-width: 1300px)
+    display: none
+  &-mobil
+    display: none
+    background-color: #ffffff
+    @media(max-width: 1300px)
+      display: block
+    &__wrap
+      padding: 26px 0
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__search
+      img
+        width: 20px
+    &__burger
+      display: flex
+      flex-direction: column
+      gap: 8px
+      transition: all .3s
+      &.active
+        gap: 0
+        .header-mobil__burger-line:nth-child(2)
+          display: none
+        .header-mobil__burger-line:nth-child(1)
+          transform: rotate(225deg)
+          position: absolute
+        .header-mobil__burger-line:nth-child(3)
+          transform: rotate(135deg)
+      &-line
+        width: 28px
+        height: 2px
+        background-color: #000000
+        transition: all .3s
+    &__left,
+    &__right
+      display: flex
+      gap: 16px
+      align-items: center
+    &__center
+      img
+        @media(max-width: 800px)
+          width: 81px
+          height: 60px
+        @media(max-width: 390px)
+          width: 61px
+          height: 40px
   &-location
     position: relative
     border-bottom: 1px dashed $white

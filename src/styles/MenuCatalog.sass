@@ -1,0 +1,96 @@
+.menu-catalog
+  position: absolute
+  top: 144px
+  right: 0
+  left: 0
+  bottom: 0
+  z-index: 12
+  background-color: #f8f8f8
+  overflow: auto
+  visibility: hidden
+  transition: all .3s
+  &.active
+    visibility: visible
+    .menu-catalog__page
+      &.active
+        visibility: visible
+        width: 100%
+  &-wrap
+    display: flex
+  &__left
+    display: flex
+    flex-direction: column
+    width: 30%
+    padding: 18px 0 0 0
+  &__right
+    width: 70%
+    background-color: #ffffff
+    padding: 28px 36px
+    position: relative
+    overflow-y: auto
+    overflow-x: hidden
+    &::-webkit-scrollbar
+      width: 4px
+    &::-webkit-scrollbar-track
+      background: #EAEAEA
+    &::-webkit-scrollbar-thumb
+      background-color: #FBBC2B
+      border-radius: 20px
+  &__section
+    display: flex
+    gap: 16px
+    padding: 13px 16px
+    transition: all .3s
+    align-items: center
+    position: relative
+    path
+      transition: all .3s
+    &:after
+      content: ""
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDlMNSA1TDEgMSIgc3Ryb2tlPSIjMEYwRjBGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=')
+      width: 6px
+      height: 10px
+      transition: all .3s
+      position: absolute
+      right: 21px
+    &.active
+      background-color: #ffffff
+      .menu-catalog__section-logo
+        path
+          fill: #FCB514
+      &:after
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDlMNSA1TDEgMSIgc3Ryb2tlPSIjRkNCNTE0IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=')
+  &__page
+    position: absolute !important
+    top: 28px
+    left: 36px
+    right: 36px
+    bottom: 28px
+    visibility: hidden
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    gap: 28px 40px
+    width: 0
+    transition: all .3s
+    height: fit-content
+    max-height: 1200px
+  &__links
+    display: flex
+    flex-direction: column
+    gap: 10px
+    margin-top: 10px
+    a
+      font-weight: 400
+      font-size: 15px
+      line-height: 147%
+      color: #495057
+  &__subsection
+    width: 240px
+    height: fit-content
+    display: block
+    &-title
+      font-weight: 600
+      font-size: 16px
+      line-height: 150%
+      color: #212529

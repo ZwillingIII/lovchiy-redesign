@@ -51,3 +51,25 @@ header.header
             img(src="assets/images/other/cart.svg")
             span Корзина
             .header-bottom__cart-count 93+
+
+header.header-mobil
+  .container
+    .header-mobil__wrap
+      .header-mobil__left
+        button.header-mobil__burger#open-mobil-menu
+          .header-mobil__burger-line
+          .header-mobil__burger-line
+          .header-mobil__burger-line
+        button.header-mobil__search
+          img(src="./assets/images/other/search.svg")
+      .header-mobil__center
+        img(src="./assets/images/other/logo.svg")
+      .header-mobil__right
+        a.header-mobil__personal
+          img(src="./assets/images/other/profile.svg")
+        a.header-mobil__favorite
+          img(src="./assets/images/other/fav.svg")
+        a.header-mobil__cart
+          img(src="./assets/images/other/cart.svg")
+
+include ../components/MobilMenu.pug
