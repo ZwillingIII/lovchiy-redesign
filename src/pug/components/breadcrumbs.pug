@@ -1,0 +1,14 @@
+-
+  var bread = [
+    { text: 'Главная', link: '/' },
+    { text: 'Одежда для охоты и рыбалки', link: '/section.html' }
+  ]
+
+.breadcrumbs
+  .container
+    .breadcrumbs-wrap
+      each value, key in bread
+        if key > 0
+          a.breadcrumbs-item( href=value.link )= ' / ' + value.text
+        else
+          a.breadcrumbs-item( href=value.link )= value.text

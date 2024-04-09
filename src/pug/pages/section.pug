@@ -1,0 +1,15 @@
+extends ../layout/main
+
+append variables
+  - var title = 'Каталог';
+
+block content
+  main.main
+    include ../components/breadcrumbs
+    include ../components/catalog
+
+append styles
+  +style('breadcrumbs.css')
+  +style('catalog.css')
+  +style('filter.css')
+  +style('products.css')

@@ -257,3 +257,53 @@ a
 
 .bg-grey
   background-color: #e8e8e8
+
+.custom-checkbox
+  display: inline-flex
+  position: relative
+  line-height: 17px
+  cursor: pointer
+  font-weight: 400
+  font-size: 16px
+  color: #0f0f0f
+  margin-right: 19px
+  input[type='checkbox']
+    display: none
+  input + span
+    border: 1px solid #afafaf
+    box-sizing: border-box
+    border-radius: 2px
+    min-width: 18px
+    height: 18px
+    margin: 0 14px 0 0
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    transition-duration: 0.3s
+    transition-timing-function: ease
+    transition-property: border, background
+    &:after
+      content: ''
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2762 1.90576L9.67189 2.51553C8.00581 4.18527 6.22816 6.08059 4.56392 7.77326L2.26393 5.87978L1.60067 5.3342L0.515015 6.65551L1.17277 7.20109L4.08252 9.59736L4.68679 10.0946L5.23237 9.54387C7.07542 7.69654 9.07251 5.53654 10.8807 3.72436L11.485 3.11459L10.2762 1.90576Z' fill='black'/%3E%3C/svg%3E%0A")
+      width: 12px
+      height: 12px
+      display: block
+      opacity: 0
+      transition: opacity 0.3s ease
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+  input:checked + span
+    border-color: #1d1d1d
+    background-color: $btn-orange
+    &:after
+      opacity: 1
+
+.vertical-scroll
+  &::-webkit-scrollbar
+    width: 4px
+  &::-webkit-scrollbar-track
+    background: #EAEAEA
+  &::-webkit-scrollbar-thumb
+    background-color: #FBBC2B
+    border-radius: 20px

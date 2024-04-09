@@ -1,0 +1,47 @@
+.catalog-filter
+  &__range
+    display: flex
+    gap: 20px
+  &__wrap
+    display: flex
+    flex-direction: column
+    gap: 10px
+  &__body
+    display: none
+    &-content
+      display: flex
+      flex-direction: column
+      gap: 10px
+      overflow: auto
+      max-height: 170px
+      margin-top: 20px
+  &__item
+    background: #ffffff
+    border: 1px solid #eaeaea
+    padding: 20px
+    border-radius: 6px
+    width: 295px
+    max-height: 320px
+    &-color
+      width: 18px
+      height: 18px
+      margin-right: 5px
+      border-radius: 100%
+  &__input
+    border: 1px solid #d1d2d4
+    border-radius: 3px
+    width: 100%
+    box-sizing: border-box
+    margin-top: 20px
+    padding: 15px
+  &__header
+    display: flex
+    justify-content: space-between
+    font-weight: 600
+    font-size: 16px
+    color: #0f0f0f
+    &-arrow
+      transition: all .3s
+    &.active
+      .catalog-filter__header-arrow
+        transform: rotate(180deg)

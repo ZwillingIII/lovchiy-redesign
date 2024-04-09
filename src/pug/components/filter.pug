@@ -1,0 +1,105 @@
+-
+  var categories = [
+    'Костюмы',
+    'Экипировка с подогревом',
+    'Обувь',
+    'Одежда детская',
+    'Костюмы',
+    'Экипировка с подогревом',
+    'Обувь',
+    'Одежда детская',
+    'Костюмы',
+    'Экипировка с подогревом',
+    'Обувь',
+    'Одежда детская',
+  ];
+  var brands = [
+    'Тест',
+    'Тест',
+    'Тест',
+    'Тест',
+    'Тест',
+    'Тест',
+    'Тест',
+    'Тест',
+    'Тест',
+  ];
+  var colors = [
+    {
+      name: 'Белый',
+      color: '#EFEFEF'
+    },
+    {
+      name: 'Черный',
+      color: '#0F0F0F'
+    },
+    {
+      name: 'Хаки',
+      color: '#75884B'
+    }
+  ]
+
+.catalog-filter
+  .catalog-filter__wrap
+    .catalog-filter__item
+      .catalog-filter__header
+        .catalog-filter__header-title Категория
+        img.catalog-filter__header-arrow( src="assets/images/other/filter-arrow.svg" )
+      .catalog-filter__body
+        .catalog-filter__inner
+          input.catalog-filter__input(
+            placeholder="Поиск товара"
+          )
+          .catalog-filter__body-content.vertical-scroll
+            each item in categories
+              label.custom-checkbox
+                input(
+                  type="checkbox"
+                )
+                span
+                div
+                  span= item
+    .catalog-filter__item
+      .catalog-filter__header
+        .catalog-filter__header-title Бренд
+        img.catalog-filter__header-arrow( src="assets/images/other/filter-arrow.svg" )
+      .catalog-filter__body
+        .catalog-filter__inner
+          .catalog-filter__body-content.vertical-scroll
+            each item in brands
+              label.custom-checkbox
+                input(
+                  type="checkbox"
+                )
+                span
+                div
+                  span= item
+    .catalog-filter__item
+      .catalog-filter__header
+        .catalog-filter__header-title Цена (руб.)
+        img.catalog-filter__header-arrow( src="assets/images/other/filter-arrow.svg" )
+      .catalog-filter__body
+        .catalog-filter__inner
+          .catalog-filter__range
+            input.catalog-filter__input(
+              placeholder="от"
+            )
+            input.catalog-filter__input(
+              placeholder="до"
+            )
+    .catalog-filter__item
+      .catalog-filter__header
+        .catalog-filter__header-title Цвет
+        img.catalog-filter__header-arrow( src="assets/images/other/filter-arrow.svg" )
+      .catalog-filter__body
+        .catalog-filter__inner
+          .catalog-filter__body-content.vertical-scroll
+            each item in colors
+              label.custom-checkbox
+                input(
+                  type="checkbox"
+                )
+                span
+                .catalog-filter__item-color( style="background: " + item.color )
+                div
+                  span= item.name

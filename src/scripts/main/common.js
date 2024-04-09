@@ -170,4 +170,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     $('.mobil-menu__internal-item[data-open-id=' + code + ']').removeClass('active');
   });
+
+  // * Переключает видимость у блоков в блоке фильтр на пк версии
+  $('.catalog-filter__header').on('click', function (e) {
+    e.stopPropagation();
+    if (window.innerWidth > 1000) {
+      $(this).toggleClass('active');
+      $(this).parent().find('.catalog-filter__body').slideToggle(300);
+    }
+  });
 })
