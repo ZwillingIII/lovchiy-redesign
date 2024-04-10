@@ -174,9 +174,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // * Переключает видимость у блоков в блоке фильтр на пк версии
   $('.catalog-filter__header').on('click', function (e) {
     e.stopPropagation();
-    if (window.innerWidth > 1000) {
+    // if (window.innerWidth > 1000) {
       $(this).toggleClass('active');
       $(this).parent().find('.catalog-filter__body').slideToggle(300);
-    }
+    // }
   });
+
+  if ($('select').length) {
+    $('select').selectize({
+
+    })
+  }
 })

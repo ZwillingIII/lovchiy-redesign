@@ -5,7 +5,10 @@ const concat = require("gulp-concat");
 const chalk = require("chalk");
 const browserSync = require("browser-sync");
 
-const cssPlugins = ["node_modules/swiper/swiper-bundle.min.css"];
+const cssPlugins = [
+  "node_modules/swiper/swiper-bundle.min.css",
+  "node_modules/@selectize/selectize/dist/css/selectize.css"
+];
 
 // * Задача для стилей плагинов
 module.exports = function cssPluginsFunc(done) {

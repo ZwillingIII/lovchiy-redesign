@@ -8,6 +8,7 @@ const uglify = require("gulp-uglify-es").default;
 const jsPlugins = [
   "node_modules/swiper/swiper-bundle.min.js",
   "node_modules/jquery/dist/jquery.js",
+  "node_modules/@selectize/selectize/dist/js/selectize.min.js"
 ];
 
 // * Задача для js плагинов
