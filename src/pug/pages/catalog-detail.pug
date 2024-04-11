@@ -1,0 +1,17 @@
+extends ../layout/main.pug
+
+append variables
+  - var title = 'Детальная страница товара';
+  - var bread = [ { text: 'Главная', link: '/' }, { text: 'Одежда для охоты и рыбалки', link: '/section.html' }, { text: 'Обувь для рыбалки и охоты', link: '/section.html' }, { text: 'Ботинки Remington Lynx 400 boot Green Forest', link: '#' } ]
+
+block content
+  main.main
+    include ../components/breadcrumbs
+    include ../components/catalog-detail
+    include ../components/NewsProducts
+    include ../components/NewsProducts
+
+append styles
+  +style('breadcrumbs.css')
+  +style('catalog-detail.css')
+  +style('NewsProducts.css')

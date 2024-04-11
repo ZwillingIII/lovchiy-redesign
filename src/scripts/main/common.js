@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+  const detailBitPag = new Swiper('.catalog-detail__img-pagination_items', {
+    direction: 'horizontal',
+    spaceBetween: 10,
+    slidesPerView: "auto",
+  });
+  const detailBigImg = new Swiper('.catalog-detail__img-big_items', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.catalog-detail__img-big_next',
+      prevEl: '.catalog-detail__img-big_prev'
+    },
+    thumbs: {
+      swiper: detailBitPag,
+    },
+  });
+
   const banner = new Swiper('.banner-banner__items', {
     direction: 'horizontal',
     slidesPerView: 1,
@@ -181,8 +198,21 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   if ($('select').length) {
-    $('select').selectize({
-
-    })
+    $('select').selectize({})
   }
+
+  $(document).on('click', '.catalog-detail__tabs-point', function () {
+    const tab = $(this);
+    const activeTab = $('.catalog-detail__tabs-point.active');
+    const id = tab.attr('data-tab');
+    const list = $('.catalog-detail__tabs-list[data-tab=' + id + ']');
+    const activeList = $('.catalog-detail__tabs-list.active');
+
+    if (!tab.hasClass('active')) {
+      activeTab.removeClass('active');
+      tab.addClass('active');
+      activeList.removeClass('active');
+      list.addClass('active')
+    }
+  })
 })
