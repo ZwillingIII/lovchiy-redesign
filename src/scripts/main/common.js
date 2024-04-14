@@ -214,5 +214,59 @@ document.addEventListener('DOMContentLoaded', function() {
       activeList.removeClass('active');
       list.addClass('active')
     }
+  });
+
+  // start cart
+  $(document).on('change', '#select-all', function() {
+    const cartItem = $('.cart-products__item');
+    const checkboxItem = cartItem.find('#products');
+
+    if ($(this).prop('checked')) {
+      checkboxItem.prop('checked', true);
+    } else {
+      checkboxItem.prop('checked', false);
+    }
+  });
+
+  $(document).on('click', '.cart-products__item-count_button', function() {
+    const btn = $(this);
+    const direction = btn.attr('data-direction');
+    const productID = btn.attr('data-product-id')
+    const input = $('.cart-products__item-count input[data-product-id=' + productID + ']');
+    const inputMax = input.attr('max');
+    const inputMin = input.attr('min');
+
+    let inputVal = parseInt(input.val());
+
+    if (!btn.hasClass('disabled')) {
+      switch (direction) {
+        case 'plus':
+          inputVal++;
+          if (inputVal >= inputMax) btn.addClass('disabled');
+          if (inputVal > inputMin && $('.cart-products__item-count_button[data-direction="min"]').hasClass('disabled')) $('.cart-products__item-count_button[data-direction="min"]').removeClass('disabled')
+          break;
+        case 'min':
+          inputVal--;
+          if (inputVal <= inputMin) btn.addClass('disabled');
+          if (inputVal < inputMax && $('.cart-products__item-count_button[data-direction="plus"]').hasClass('disabled')) $('.cart-products__item-count_button[data-direction="plus"]').removeClass('disabled')
+          break;
+      }
+      input.val(inputVal);
+    }
+  });
+
+  $(document).on('click', '#delete-select', function() {
+    const selectItems = $('#products:checked');
+
+    if (selectItems.length > 0) {
+     for (let i = 0; i < selectItems.length; i++) {
+       $('.cart-products__item[data-id=' + selectItems[i].getAttribute('data-id') + ']').remove();
+     }
+     if ($('.cart-products__item').length <= 0) {
+       $('.cart-content').css('display', 'none');
+       $('.cart-empty').addClass('active');
+     }
+    }
   })
+  // end cart
 })

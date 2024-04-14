@@ -1,0 +1,11 @@
+extends ../layout/main
+
+append variables
+  - var title = 'Корзина';
+
+block content
+  main.main
+    include ../components/cart/index
+
+append styles
+  +style('cart.css')

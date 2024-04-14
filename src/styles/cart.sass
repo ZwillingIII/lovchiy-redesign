@@ -1,0 +1,264 @@
+.cart
+  &-wrap
+    margin: 40px 0 100px 0
+  &-content
+    margin-top: 40px
+  &-info
+    display: flex
+    gap: 20px
+    @media (max-width: 1200px)
+      flex-direction: column
+  &-empty
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 0
+    visibility: hidden
+    transition: all .3s
+    &.active
+      height: 100%
+      visibility: visible
+      margin-top: 40px
+    &__wrap
+      max-width: 324px
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 20px
+    &__img
+      max-width: 60px
+    &__link
+      margin-top: 20px
+    &__title
+      font-weight: 600
+      font-size: 18px
+      text-align: center
+      color: #0f0f0f
+    &__desc
+      font-weight: 400
+      font-size: 18px
+      text-align: center
+      color: #737373
+  &-products
+    width: 70%
+    @media (max-width: 1200px)
+      width: 100%
+    &__settings
+      display: flex
+      gap: 54px
+      font-weight: 400
+      font-size: 16px
+      color: #737373
+      &-delete
+        display: flex
+        align-items: center
+        gap: 6px
+    &__items
+      margin: 20px 0 0 0
+      display: flex
+      flex-direction: column
+      gap: 16px
+    &__item
+      padding: 30px 20px
+      background-color: #ffffff
+      border: 1px solid #eaeaea
+      border-radius: 8px
+      display: flex
+      gap: 20px
+      @media (max-width: 400px)
+        gap: 10px
+      &-img
+        width: 96px
+        height: 96px
+        padding: 13px 2px
+        @media (max-width: 400px)
+          width: 60px
+          height: 60px
+      &-name
+        font-weight: 600
+        font-size: 18px
+        color: #0f0f0f
+        @media (max-width: 550px)
+          font-size: 16px
+        @media (max-width: 400px)
+          font-size: 14px
+      &-articul
+        font-weight: 400
+        font-size: 13px
+        line-height: 123%
+        color: #737373
+        margin-top: 8px
+      &-content
+        display: flex
+        flex-direction: column
+        width: 100%
+        gap: 30px
+      &-info,
+      &-settings
+        display: flex
+        justify-content: space-between
+        @media (max-width: 550px)
+          flex-direction: column
+          gap: 10px
+          justify-content: start
+      &-settings
+        &_left
+          display: flex
+          gap: 32px
+          @media (max-width: 700px)
+            flex-direction: column
+      &-favorite,
+      &-delete
+        display: flex
+        gap: 4px
+        font-weight: 400
+        font-size: 16px
+        color: #737373
+        img
+          width: 20px
+          height: 20px
+      &-count
+        display: flex
+        align-items: center
+        input
+          border: 1px solid #d1d2d4
+          width: 48px
+          height: 38px
+          font-weight: 400
+          font-size: 16px
+          line-height: 137%
+          text-align: center
+          color: #0f0f0f
+        &_button
+          padding: 12px
+          background: #f8f8f8
+          border: 1px solid #d1d2d4
+          border-radius: 3px 0 0 3px
+          width: 38px
+          height: 38px
+          path
+            stroke: #0F0F0F
+          &.disabled
+            path
+              stroke: #9E9E9E
+      &-price
+        display: flex
+        flex-direction: column
+        gap: 6px
+        &_old
+          font-weight: 400
+          font-size: 14px
+          line-height: 114%
+          text-decoration: line-through
+          color: #737373
+          text-align: right
+          @media (max-width: 550px)
+            text-align: left
+        &_new
+          font-weight: 600
+          font-size: 18px
+          line-height: 122%
+          text-align: right
+          color: #0f0f0f
+          text-wrap: nowrap
+          @media (max-width: 550px)
+            text-align: left
+      &-points
+        display: flex
+        justify-content: end
+        align-items: center
+        margin-top: 6px
+        gap: 5px
+        @media (max-width: 550px)
+          justify-content: start
+  &-total
+    min-width: 295px
+    width: 30%
+    @media (max-width: 1200px)
+      width: 100%
+    &__order
+      width: 100%
+      margin-top: 15px
+    &__values
+      box-shadow: 0 6px 10px 0 rgba(115, 115, 115, 0.1)
+      background: #ffffff
+      border-radius: 6px
+      padding: 20px
+      margin-top: 20px
+      &-title
+        font-weight: 600
+        font-size: 20px
+        color: #0f0f0f
+        margin-bottom: 20px
+      &-point
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &_name
+          font-weight: 400
+          font-size: 14px
+          color: #0f0f0f
+        &_val
+          font-weight: 600
+          font-size: 16px
+          text-align: right
+          color: #0f0f0f
+          &.orange
+            color: #e9a100
+      &-points
+        display: flex
+        flex-direction: column
+        gap: 12px
+      &-total
+        margin-top: 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &_name
+          font-weight: 400
+          font-size: 18px
+          color: #0f0f0f
+        &_val
+          font-weight: 600
+          font-size: 18px
+          text-align: right
+          color: #0f0f0f
+    &__points
+      border: 1px solid #eaeaea
+      border-radius: 6px
+      background-color: #ffffff
+      margin-top: 16px
+      padding: 20px
+      &-text
+        font-weight: 400
+        font-size: 14px
+        color: #737373
+      &-content
+        margin-top: 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+      &-value
+        display: flex
+        gap: 5px
+        align-items: center
+      &-val
+        font-weight: 400
+        font-size: 16px
+        color: #000
+        span
+          font-weight: 600
+    &__notauth
+      margin-top: 30px
+      &-text
+        font-weight: 400
+        font-size: 14px
+        line-height: 150%
+        color: #0f0f0f
+        a
+          border-bottom: 1px solid #737373
+          color: #737373
+          transition: all .3s
+          &:hover
+            border-bottom: 1px solid #e9a100
+            color: #e9a100

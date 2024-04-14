@@ -1,0 +1,72 @@
+-
+  var products = [
+    {
+      id: 0,
+      img: 'assets/images/other/cart/product-1.png',
+      name: 'Ботинки Remington Lynx 400 boot Green Forest',
+      art: '000000000',
+      price: 40000,
+      discountPrice: 20000,
+      point: 0
+    },
+    {
+      id: 1,
+      img: 'assets/images/other/cart/product-2.png',
+      name: 'Рогатка Centershot с комплектом для боуфишинга',
+      art: '000000000',
+      price: 40000,
+      discountPrice: 20000,
+      point: 20
+    },
+  ]
+
+.cart-products
+  .cart-products__wrap
+    .cart-products__items
+      each item in products
+        .cart-products__item( data-id=item.id )
+          label.custom-checkbox
+            input#products(
+              type="checkbox"
+              data-id=item.id
+            )
+            span
+          img.cart-products__item-img(src=item.img)
+          .cart-products__item-content
+            .cart-products__item-info
+              .cart-products__item-text.cart-products__item-content_left
+                .cart-products__item-name= item.name
+                .cart-products__item-articul= "Артикул: "+item.art
+              .cart-products__item-price.cart-products__item-content_right
+                .cart-products__item-price_old= item.price+' ₽'
+                .cart-products__item-price_new= item.discountPrice+' ₽'
+                if item.point
+                  .cart-products__item-points
+                    .product-card__points-logo Б
+                    span= item.point
+            .cart-products__item-settings
+              .cart-products__item-settings_left
+                .cart-products__item-favorite
+                  img(src="assets/images/other/fav-grey.svg")
+                  span В избранное
+                .cart-products__item-delete
+                  img(src="assets/images/other/delete-grey.svg")
+                  span Удалить
+              .cart-products__item-settings_right
+                .cart-products__item-count
+                  button.cart-products__item-count_button.disabled( data-product-id=item.id data-direction="min" )
+                    svg(width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      g(clip-path="url(#clip0_359_1785)")
+                        path(d="M14 7L0 7" stroke="#9E9E9E" stroke-width="1.5")
+                      defs
+                        clipPath(id="clip0_359_1785")
+                          rect(width="14" height="14" fill="white")
+                  input(type="number" value="1" data-product-id=item.id min="1" max="10")
+                  button.cart-products__item-count_button( data-product-id=item.id data-direction="plus" )
+                    svg(width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      g(clip-path="url(#clip0_359_1781)")
+                        path(d="M7 0V14" stroke="#0F0F0F" stroke-width="1.5")
+                        path(d="M14 7L2.38419e-07 7" stroke="#0F0F0F" stroke-width="1.5")
+                      defs
+                        clipPath(id="clip0_359_1781")
+                          rect(width="14" height="14" fill="white")
