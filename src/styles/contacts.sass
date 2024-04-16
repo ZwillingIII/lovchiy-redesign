@@ -1,0 +1,150 @@
+.contacts
+  margin-bottom: 80px
+  &-content
+    margin-top: 40px
+  &-city
+    display: flex
+    align-items: center
+    gap: 20px
+    @media (max-width: 390px)
+      flex-direction: column
+      align-items: start
+    &__name
+      font-weight: 500
+      font-size: 18px
+      color: #0f0f0f
+    .select
+      font-weight: 400
+      font-size: 16px
+      color: #0f0f0f
+  &-map
+    width: 100%
+    max-height: 680px
+    height: 680px
+    margin-top: 40px
+    position: relative
+    #map
+      width: 100%
+      height: 100%
+    &__marker
+      cursor: pointer
+      width: 75px
+      height: 95px
+      position: relative
+      transform: translate(-50%, -50%)
+    &__info
+      position: absolute
+      left: 10%
+      top: 30px
+      bottom: 30px
+      z-index: 2
+      background-color: #ffffff
+      max-width: 380px
+      padding: 30px 20px
+      @media (max-width: 800px)
+        top: 0
+        left: 0
+        bottom: 0
+      @media (max-width: 700px)
+        max-width: 250px
+      @media (max-width: 450px)
+        max-width: 200px
+      &-title
+        font-weight: 400
+        font-size: 16px
+        color: #0f0f0f
+        @media (max-width: 700px)
+          font-size: 12px
+        @media (max-width: 450px)
+          font-size: 10px
+      &-items
+        margin-top: 5px
+      &-item
+        padding: 15px 0
+        border-bottom: 1px solid #E4E4E4
+        &:last-child
+          border-bottom: none
+        &_title
+          font-weight: 400
+          font-size: 14px
+          color: #737373
+          display: flex
+          align-items: center
+          gap: 10px
+          @media (max-width: 700px)
+            font-size: 10px
+          @media (max-width: 450px)
+            font-size: 8px
+        &_content
+          margin-top: 5px
+          padding-left: 25px
+          display: flex
+          flex-direction: column
+          gap: 5px
+          &-title
+            font-weight: 400
+            font-size: 14px
+            color: #737373
+            @media (max-width: 700px)
+              font-size: 10px
+            @media (max-width: 450px)
+              font-size: 8px
+          span, a
+            font-weight: 600
+            font-size: 16px
+            color: #0f0f0f
+            @media (max-width: 700px)
+              font-size: 12px
+            @media (max-width: 450px)
+          font-size: 10px
+  &-bottom
+    margin-top: 50px
+    display: flex
+    gap: 20px
+    justify-content: space-between
+    @media (max-width: 800px)
+      flex-direction: column
+      align-items: center
+    &__left,
+    &__right
+      width: 50%
+      @media (max-width: 800px)
+        width: 100%
+    &__title
+      font-weight: 600
+      font-size: 30px
+      color: #0f0f0f
+  &-form
+    &__inputs
+      margin-top: 30px
+      display: flex
+      flex-direction: column
+      gap: 20px
+      input,
+      textarea
+        width: 100%
+        margin-top: 10px
+    &__input
+      &-title
+        font-weight: 400
+        font-size: 16px
+        color: #0f0f0f
+    &__privacy
+      margin-top: 20px
+      font-weight: 300
+      font-size: 14px
+      color: #000
+      span
+        font-weight: 600
+        border-bottom: 1px solid #000
+    &__submit
+      margin-top: 30px
+  &-requisites
+    &__content
+      margin-top: 30px
+      display: flex
+      gap: 5px
+      flex-direction: column
+
+.ymaps3x0--marker
+  width: 75px

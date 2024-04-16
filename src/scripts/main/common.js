@@ -1,3 +1,39 @@
+async function initMap() {
+  await ymaps3.ready;
+
+  const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker, YMapControls} = ymaps3;
+
+  const {YMapZoomControl, YMapGeolocationControl} = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
+
+  const map = new YMap(
+    document.getElementById('map'),
+    {
+      location: {
+        center: [37.588144, 55.733842],
+        zoom: 14,
+      }
+    },
+  );
+
+  map.addChild(
+    // Here we place the control on the right
+    new YMapControls({position: 'right'})
+      // Add the first zoom control to the map
+      .addChild(new YMapZoomControl({}))
+      .addChild(new YMapGeolocationControl({}))
+  );
+
+  const markerElement = document.createElement('img');
+  markerElement.className = 'contacts-map__marker';
+  markerElement.src = '../assets/images/other/map-point.png';
+
+  map.addChild(new YMapDefaultFeaturesLayer({}));
+  map.addChild(new YMapMarker({coordinates: [37.588144, 55.733842]}, markerElement))
+  map.addChild(new YMapDefaultSchemeLayer({}));
+}
+
+initMap();
+
 document.addEventListener('DOMContentLoaded', function() {
   const detailBitPag = new Swiper('.catalog-detail__img-pagination_items', {
     direction: 'horizontal',
@@ -285,4 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $(this).parent().find('.order-info__items-body').slideToggle(300);
   });
   // end order
+
+  // start contacts
+  // end contacts
 })

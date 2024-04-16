@@ -1,0 +1,76 @@
+.contacts
+  .container
+    .contacts-wrap
+      h2.page-title Контакты
+      .contacts-content
+        .contacts-city
+          .contacts-city__name Выбрать город:
+          select.select
+            option(value=0) Чебоксары
+  .contacts-map
+    .contacts-map__info
+      .contacts-map__info-wrap
+        .contacts-map__info-title Розничный магазин и пункт выдачи
+        .contacts-map__info-items
+          .contacts-map__info-item
+            .contacts-map__info-item_title
+              img(src="assets/images/other/contacts/map.svg")
+              span Адрес
+            .contacts-map__info-item_content
+              span 428000, Республика Чувашия, г. Чебоксары, ул. Водопроводная, 22, корпус 1.
+          .contacts-map__info-item
+            .contacts-map__info-item_title
+              img(src="assets/images/other/contacts/phone.svg")
+              span Телефон магазина
+            .contacts-map__info-item_content
+              a 8 (8352) 22-41-01
+              a 8-800-700-49-78
+          .contacts-map__info-item
+            .contacts-map__info-item_title
+              img(src="assets/images/other/contacts/mail.svg")
+              span Отдел продаж интернет-магазина
+            .contacts-map__info-item_content
+              a sale@lovchy.ru
+              .contacts-map__info-item_content-title отдел маркетинга и закупок
+              a market@lovchy.ru
+          .contacts-map__info-item
+            .contacts-map__info-item_title
+              img(src="assets/images/other/contacts/time.svg")
+              span Режим работы
+            .contacts-map__info-item_content
+              span Пн-Пт: с 9:00 до 20:00#[br]Сб-Вс: с 9:00 до 18:00
+              .contacts-map__info-item_content-title График работы интернет-магазин
+              a Пн-Пт: с 9:00 до 18:00
+    #map
+  .container
+    .contacts-bottom
+      .contacts-bottom__left
+        .contacts-form
+          .contacts-bottom__title Задать вопрос
+          .contacts-form__inputs
+            .contacts-form__input
+              .contacts-form__input-title Ваше имя*
+              input.custom-input(placeholder="Ваше имя")
+            .contacts-form__input
+              .contacts-form__input-title Телефон*
+              input.custom-input(placeholder="+7 (___) ___-__-__")
+            .contacts-form__input
+              .contacts-form__input-title Email*
+              input.custom-input(placeholder="Ваша почта")
+            .contacts-form__input
+              .contacts-form__input-title Ваше сообщение
+              textarea.custom-textarea(placeholder="Текст сообщения" rows="6")
+          .contacts-form__privacy Нажимая на кнопку, вы даете согласие на обработку своих #[span персональных данных]
+          button.contacts-form__submit.btn Отправить
+      .contacts-bottom__right
+        .contacts-requisites
+          .contacts-bottom__title Реквизиты
+          .contacts-requisites__content
+            span ООО "Ловчий"
+            span ИНН 2130036756/КПП 213001001
+            span адрес: 428018, г. Чебоксары, ул. Водопроводная,
+            span д. 22, корпус 1
+            span р/с 40702810700700001101 в ПАО "АК БАРС" Банк г. Казань
+            span к/с 30101810000000000805
+            span БИК 049205805
+            span ОГРН 1082130003460
