@@ -269,4 +269,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   })
   // end cart
+
+  // start order
+  $('.order-form__section-header').on('click', function (e) {
+    e.stopPropagation();
+
+    $(this).toggleClass('active');
+    $(this).parent().find('.order-form__section-body').slideToggle(300);
+  });
+
+  $('.order-info__items-header').on('click', function (e) {
+    e.stopPropagation();
+
+    $(this).toggleClass('active');
+    $(this).parent().find('.order-info__items-body').slideToggle(300);
+  });
+  // end order
 })

@@ -1,0 +1,181 @@
+.order-form
+  .order-form__wrap
+    .order-form__sections
+      .order-form__section.completed(data-visited="true")
+        .order-form__section-header
+          .order-form__section-title
+            img(src='assets/images/other/order/section-ok.svg')
+            span 1. Контактная информация
+            .order-form__section-title_edit
+              img(src="assets/images/other/order/edit.svg")
+              span Редактировать
+          .order-form__section-desc Пожалуйста, укажите свои контактные данные и убедитесь, что правильно выбран населённый пункт
+          .order-form__section-ok
+            .order-form__section-ok_location
+              .order-form__section-ok_el Анастасия Прокофьева
+              .order-form__section-ok_el +7 999 999 99 99
+              .order-form__section-ok_el nastya@mail.ru
+              .order-form__section-ok_el Чебоксары, Чувашская республика
+        .order-form__section-body(style="display: none")
+          .order-form__section-inner
+            .order-form__section-location
+              .order-form__section-input.order-form__section-city
+                .order-form__section-input_title Местоположение*
+                input.custom-input(value="Чебоксары")
+              .order-form__section-input.order-form__section-postal
+                .order-form__section-input_title Индекс*
+                input.custom-input(value="428000")
+            .order-form__section-personal
+              .order-form__section-input
+                .order-form__section-input_title Имя*
+                input.custom-input(placeholder="Ваше имя")
+              .order-form__section-input
+                .order-form__section-input_title Фамилия*
+                input.custom-input(placeholder="Ваша фамилия")
+              .order-form__section-input
+                .order-form__section-input_title Телефон*
+                input.custom-input(placeholder="+7 (___) ___-__-__")
+              .order-form__section-input
+                .order-form__section-input_title E-mail*
+                input.custom-input(placeholder="Ваш e-mail")
+            .order-form__section-next.btn Подтвердить
+      .order-form__section.completed(data-visited="true")
+        .order-form__section-header
+          .order-form__section-title
+            img(src='assets/images/other/order/section-ok.svg')
+            .order-form__section-title_delivery
+              span 2. Доставка
+              div Ваш город #[span Чебоксары]
+            .order-form__section-title_edit
+              img(src="assets/images/other/order/edit.svg")
+              span Редактировать
+          .order-form__section-desc Выберите удобный способ доставки
+          .order-form__section-ok
+            .order-form__section-ok_delivery
+              .order-form__section-ok_del
+                .order-form__section-ok_name Адрес:
+                .order-form__section-ok_val Чебоксары, ул. Водопроводная, 22к1
+              .order-form__section-ok_del
+                .order-form__section-ok_name Время работы:
+                .order-form__section-ok_val Пн-Пт: с 9:00 до 20:00#[br]Сб-Вс: с 9:00 до 18:00
+              .order-form__section-ok_del
+                .order-form__section-ok_name Стоимость:
+                .order-form__section-ok_val Бесплатно
+              .order-form__section-ok_del
+                .order-form__section-ok_name Срок:
+                .order-form__section-ok_val 1 день
+        .order-form__section-body
+          .order-form__section-inner
+            .order-form__section-delivery
+              .order-form__section-delivery_item
+                input(type="radio" id="samo" name="delivery" checked)
+                label.order-form__section-delivery_item-content(for="samo")
+                  svg(width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(fill-rule="evenodd" clip-rule="evenodd" d="M0.375 10.8972C0.375 5.14736 5.17985 0.5 10.9918 0.5C16.8201 0.5 21.625 5.14736 21.625 10.8972C21.625 13.7946 20.5713 16.4845 18.8369 18.7645C16.9235 21.2794 14.5652 23.4706 11.9107 25.1905C11.3031 25.588 10.7548 25.618 10.0881 25.1905C7.41842 23.4706 5.06011 21.2794 3.16313 18.7645C1.42748 16.4845 0.375 13.7946 0.375 10.8972ZM7.49279 11.2209C7.49279 13.1471 9.06457 14.6621 10.9918 14.6621C12.9203 14.6621 14.5072 13.1471 14.5072 11.2209C14.5072 9.30974 12.9203 7.72104 10.9918 7.72104C9.06457 7.72104 7.49279 9.30974 7.49279 11.2209Z" fill="#9E9E9E")
+                  .order-form__section-delivery_item-info
+                    .order-form__section-delivery_item-title Самовывоз
+                    .order-form__section-delivery_item-val Чебоксары, ул. Водопроводная, 22к1
+              .order-form__section-delivery_item
+                input(type="radio" id="kuryer" name="delivery")
+                label.order-form__section-delivery_item-content(for="kuryer")
+                  svg(width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M6.50024 20.0002C6.00625 20.0091 5.5157 19.9166 5.05885 19.7284C4.602 19.5403 4.18854 19.2606 3.84399 18.9065C3.48989 18.5619 3.21016 18.1485 3.02204 17.6916C2.83393 17.2348 2.74142 16.7442 2.75024 16.2502C2.06274 16.2502 1.47524 16.0052 0.985237 15.5165C0.748588 15.2879 0.561281 15.0132 0.43487 14.7095C0.308458 14.4057 0.245622 14.0792 0.250237 13.7502V2.50025C0.250237 1.81275 0.495237 1.22525 0.985237 0.73525C1.21351 0.498517 1.48793 0.311142 1.79152 0.184718C2.09511 0.0582936 2.42141 -0.00449041 2.75024 0.000249734H17.7502C18.4377 0.000249734 19.0265 0.24525 19.5165 0.73525C20.0052 1.224 20.2502 1.81275 20.2502 2.50025V5.00025H23.3752C23.584 5.00025 23.7715 5.0415 23.9377 5.12525C24.104 5.209 24.2502 5.334 24.3752 5.50025L27.5002 9.6565C27.5827 9.75899 27.6462 9.87541 27.6877 10.0002C27.729 10.1252 27.7502 10.2602 27.7502 10.4065V15.0002C27.7502 15.354 27.6302 15.6502 27.3902 15.8902C27.2744 16.008 27.1357 16.1007 26.9826 16.1626C26.8295 16.2245 26.6653 16.2544 26.5002 16.2502H25.2502C25.2502 17.2915 24.8852 18.1777 24.1565 18.9065C23.8119 19.2606 23.3985 19.5403 22.9416 19.7284C22.4848 19.9166 21.9942 20.0091 21.5002 20.0002C21.0063 20.0091 20.5157 19.9166 20.0588 19.7284C19.602 19.5403 19.1885 19.2606 18.844 18.9065C18.4899 18.5619 18.2102 18.1485 18.022 17.6916C17.8339 17.2348 17.7414 16.7442 17.7502 16.2502H10.2502C10.2502 17.2915 9.88524 18.1777 9.15649 18.9065C8.81193 19.2606 8.39848 19.5403 7.94163 19.7284C7.48478 19.9166 6.99422 20.0091 6.50024 20.0002ZM6.50024 17.5002C6.66551 17.5043 6.82986 17.4745 6.98314 17.4125C7.13643 17.3506 7.2754 17.258 7.39149 17.1402C7.50887 17.0242 7.60126 16.8854 7.66296 16.7324C7.72466 16.5793 7.75436 16.4152 7.75024 16.2502C7.75436 16.0853 7.72466 15.9212 7.66296 15.7681C7.60126 15.6151 7.50887 15.4762 7.39149 15.3602C7.2754 15.2425 7.13643 15.1499 6.98314 15.088C6.82986 15.026 6.66551 14.9962 6.50024 15.0002C6.33497 14.9962 6.17062 15.026 6.01733 15.088C5.86404 15.1499 5.72507 15.2425 5.60899 15.3602C5.4916 15.4762 5.39921 15.6151 5.33751 15.7681C5.27581 15.9212 5.24611 16.0853 5.25024 16.2502C5.25024 16.604 5.37024 16.9002 5.60899 17.1402C5.84899 17.3802 6.14649 17.5002 6.50024 17.5002ZM21.5002 17.5002C21.854 17.5002 22.1502 17.3802 22.3902 17.1402C22.508 17.0244 22.6007 16.8857 22.6626 16.7326C22.7245 16.5795 22.7543 16.4153 22.7502 16.2502C22.7543 16.0852 22.7245 15.921 22.6626 15.7679C22.6007 15.6148 22.508 15.4761 22.3902 15.3602C22.2744 15.2425 22.1357 15.1498 21.9826 15.0879C21.8295 15.026 21.6653 14.9961 21.5002 15.0002C21.3351 14.9961 21.171 15.026 21.0179 15.0879C20.8648 15.1498 20.726 15.2425 20.6102 15.3602C20.4925 15.4761 20.3998 15.6148 20.3379 15.7679C20.276 15.921 20.2461 16.0852 20.2502 16.2502C20.2502 16.604 20.3702 16.9002 20.6102 17.1402C20.726 17.258 20.8648 17.3507 21.0179 17.4126C21.171 17.4745 21.3351 17.5044 21.5002 17.5002ZM20.2502 11.2502H25.5627L22.7502 7.50025H20.2502V11.2502Z" fill="#9E9E9E")
+                  .order-form__section-delivery_item-info
+                    .order-form__section-delivery_item-title Доставка курьером
+                    .order-form__section-delivery_item-val 20 марта, от 150 р.
+              .order-form__section-delivery_item
+                input(type="radio" id="transport" name="delivery")
+                label.order-form__section-delivery_item-content(for="transport")
+                  svg(width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M23.25 18.625C23.25 19.1 22.9875 19.5125 22.5875 19.725L12.7125 25.275C12.5125 25.425 12.2625 25.5 12 25.5C11.7375 25.5 11.4875 25.425 11.2875 25.275L1.4125 19.725C1.2121 19.6197 1.04439 19.4615 0.927596 19.2675C0.810798 19.0736 0.749376 18.8514 0.750005 18.625V7.375C0.750005 6.9 1.0125 6.4875 1.4125 6.275L11.2875 0.725C11.4875 0.575 11.7375 0.5 12 0.5C12.2625 0.5 12.5125 0.575 12.7125 0.725L22.5875 6.275C22.9875 6.4875 23.25 6.9 23.25 7.375V18.625ZM12 3.1875L4.55 7.375L12 11.5625L19.45 7.375L12 3.1875Z" fill="#9E9E9E")
+                  .order-form__section-delivery_item-info
+                    .order-form__section-delivery_item-title Доставка курьером
+                    .order-form__section-delivery_item-val 20 марта, от 150 р.
+              .order-form__section-delivery_item
+                input(type="radio" id="post" name="delivery")
+                label.order-form__section-delivery_item-content(for="post")
+                  img(src="assets/images/other/delivery/rus-post.svg")
+                  .order-form__section-delivery_item-info
+                    .order-form__section-delivery_item-title Доставка курьером
+                    .order-form__section-delivery_item-val 20 марта, от 150 р.
+            .order-form__section-delivery_data
+              .order-form__section-delivery_data-title Выбранный пункт самовывоза
+              .order-form__section-delivery_data-content
+                .order-form__section-delivery_data-address
+                  .order-form__section-delivery_data-address_top Чебоксары, ул. Водопроводная, 22к1
+                  .order-form__section-delivery_data-address_bottom Забирайте завтра, после 09:00
+                .order-from__section-delivery_data-working
+                  div Пн-Пт: с 9:00 до 20:00
+                  div Сб-Вс: с 9:00 до 18:00
+              button.order-form__section-delivery_data-btn.btn.white Изменить магазин
+            .order-form__section-next.btn Подтвердить
+      .order-form__section(data-visited="true")
+        .order-form__section-header
+          .order-form__section-title
+            img(src='assets/images/other/order/section-ok.svg')
+            .order-form__section-title_delivery
+              span 3. Оплата
+            .order-form__section-title_edit
+              img(src="assets/images/other/order/edit.svg")
+              span Редактировать
+          .order-form__section-desc Выберите способ оплаты заказа
+          .order-form__section-ok
+            .order-form__section-ok_delivery
+              .order-form__section-ok_del
+                .order-form__section-ok_name Адрес:
+                .order-form__section-ok_val Чебоксары, ул. Водопроводная, 22к1
+              .order-form__section-ok_del
+                .order-form__section-ok_name Время работы:
+                .order-form__section-ok_val Пн-Пт: с 9:00 до 20:00#[br]Сб-Вс: с 9:00 до 18:00
+              .order-form__section-ok_del
+                .order-form__section-ok_name Стоимость:
+                .order-form__section-ok_val Бесплатно
+              .order-form__section-ok_del
+                .order-form__section-ok_name Срок:
+                .order-form__section-ok_val 1 день
+        .order-form__section-body
+          .order-form__section-inner
+            .order-form__section-delivery
+              .order-form__section-delivery_item
+                input(type="radio" id="online" name="pay" checked)
+                label.order-form__section-delivery_item-content(for="online")
+                  svg(width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M23 20H3C1.61929 20 0.5 18.8807 0.5 17.5V2.5C0.5 1.11929 1.61929 0 3 0H23C24.3807 0 25.5 1.11929 25.5 2.5V17.5C25.5 18.8807 24.3807 20 23 20ZM3 10V17.5H23V10H3ZM3 2.5V5H23V2.5H3ZM14.25 15H5.5V12.5H14.25V15Z" fill="#9E9E9E")
+                  .order-form__section-delivery_item-info
+                    .order-form__section-delivery_item-title Онлайн на сайте
+                    .order-form__section-delivery_item-val Быстро и удобно
+              .order-form__section-delivery_item
+                input(type="radio" id="pol" name="pay" checked)
+                label.order-form__section-delivery_item-content(for="pol")
+                  svg(width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(fill-rule="evenodd" clip-rule="evenodd" d="M20.2111 7.47725H25.5C25.5 3.23074 22.9556 0.75 18.6444 0.75H7.35556C3.04444 0.75 0.5 3.23074 0.5 7.42309V16.5769C0.5 20.7693 3.04444 23.25 7.35556 23.25H18.6444C22.9556 23.25 25.5 20.7693 25.5 16.5769V16.1869H20.2111C17.7565 16.1869 15.7667 14.2469 15.7667 11.8538C15.7667 9.46061 17.7565 7.52058 20.2111 7.52058V7.47725ZM20.2111 9.34052H24.5667C25.0821 9.34052 25.5 9.74792 25.5 10.2505V13.4137C25.494 13.9138 25.0796 14.3178 24.5667 14.3237H20.3111C19.0685 14.34 17.9819 13.5105 17.7 12.3304C17.5588 11.5979 17.757 10.842 18.2413 10.2653C18.7257 9.68859 19.4467 9.35009 20.2111 9.34052ZM20.4 12.6662H20.8111C21.3389 12.6662 21.7667 12.2491 21.7667 11.7346C21.7667 11.2201 21.3389 10.803 20.8111 10.803H20.4C20.1476 10.8001 19.9045 10.8958 19.725 11.0688C19.5455 11.2418 19.4444 11.4777 19.4444 11.7238C19.4444 12.2401 19.8705 12.6603 20.4 12.6662ZM6.42222 7.47725H13.4778C14.0055 7.47725 14.4333 7.06014 14.4333 6.54562C14.4333 6.03109 14.0055 5.61399 13.4778 5.61399H6.42222C5.89879 5.61395 5.47275 6.0245 5.46667 6.53479C5.46663 7.05109 5.89269 7.47132 6.42222 7.47725Z" fill="#9E9E9E")
+                  .order-form__section-delivery_item-info
+                    .order-form__section-delivery_item-title При получении
+                    .order-form__section-delivery_item-val Наличными или картой
+              .order-form__section-delivery_item
+                input(type="radio" id="ras" name="pay" checked)
+                label.order-form__section-delivery_item-content(for="ras")
+                  svg(width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(fill-rule="evenodd" clip-rule="evenodd" d="M13 25.5C6.1 25.5 0.5 19.9125 0.5 13C0.5 6.1 6.1 0.5 13 0.5C19.9125 0.5 25.5 6.1 25.5 13C25.5 19.9125 19.9125 25.5 13 25.5ZM16.9875 17.6375C17.1375 17.725 17.3 17.775 17.475 17.775C17.7875 17.775 18.1 17.6125 18.275 17.3125C18.5375 16.875 18.4 16.3 17.95 16.025L13.5 13.375V7.6C13.5 7.075 13.075 6.6625 12.5625 6.6625C12.05 6.6625 11.625 7.075 11.625 7.6V13.9125C11.625 14.2375 11.8 14.5375 12.0875 14.7125L16.9875 17.6375Z" fill="#9E9E9E")
+                  .order-form__section-delivery_item-info
+                    .order-form__section-delivery_item-title Купить в рассрочку
+                    .order-form__section-delivery_item-val Рассрочка до 12 месяцев на сумму до 500 000 руб.
+            .order-form__section-subpay
+              .order-form__section-delivery_item
+                input(type="radio" id="card" name="subpay" checked)
+                label.order-form__section-delivery_item-content(for="card")
+                  img(src="assets/images/other/pay/card.svg")
+                  .order-form__section-delivery_item-info
+                    .order-form__section-delivery_item-title Банковской картой
+                    .order-form__section-delivery_item-val Быстро и удобно
+              .order-form__section-delivery_item
+                input(type="radio" id="sbp" name="subpay" checked)
+                label.order-form__section-delivery_item-content(for="sbp")
+                  img(src="assets/images/other/pay/sbp.svg")
+                  .order-form__section-delivery_item-info
+                    .order-form__section-delivery_item-title СБП
+                    .order-form__section-delivery_item-val Мгновенная оплата
+            .order-form__section-next.btn Подтвердить
+    .order-form__submit
+      .order-form__submit-btn.btn Оформить заказ
+      .order-form__submit-privacy Нажимая на кнопку, вы соглашаетесь #[span с политикой конфиденциальности] и даете согласие на #[span обработку своих персональных данных]

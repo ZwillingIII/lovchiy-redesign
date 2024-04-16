@@ -1,0 +1,69 @@
+-
+  var orderProducts = [
+    {
+      img: 'assets/images/other/cart/product-1.png',
+      name: 'Ботинки Remington Lynx 400 boot Green Forest',
+      count: 1,
+      price: '20 000 ₽'
+    },
+    {
+      img: 'assets/images/other/cart/product-1.png',
+      name: 'Ботинки Remington Lynx 400 boot Green Forest',
+      count: 1,
+      price: '20 000 ₽'
+    },
+    {
+      img: 'assets/images/other/cart/product-1.png',
+      name: 'Ботинки Remington Lynx 400 boot Green Forest',
+      count: 1,
+      price: '20 000 ₽'
+    },
+    {
+      img: 'assets/images/other/cart/product-1.png',
+      name: 'Ботинки Remington Lynx 400 boot Green Forest',
+      count: 1,
+      price: '20 000 ₽'
+    },
+    {
+      img: 'assets/images/other/cart/product-1.png',
+      name: 'Ботинки Remington Lynx 400 boot Green Forest',
+      count: 1,
+      price: '20 000 ₽'
+    },
+  ]
+
+.order-info
+  .order-info__wrap
+    .order-info__title
+      span Корзина
+      .order-info__edit
+        img(src="assets/images/other/order/edit.svg")
+        span Редактировать
+    .order-info__items
+      .order-info__items-header.active
+        .order-info__items-title Товары в заказе
+        img.order-info__items-arrow(src="assets/images/other/filter-arrow.svg")
+      .order-info__items-body(style="display:block")
+        .order-info__items-inner
+          .order-info__items-products.vertical-scroll
+            each item in orderProducts
+              .order-info__item
+                .order-info__item-img
+                  img(src=item.img)
+                .order-info__item-info
+                  .order-info__item-title= item.name
+                  .order-info__item-count= "Кол-во: " + item.count + ' шт.'
+                  .order-info__item-price= item.price
+    .order-info__prices
+      .order-info__prices-item
+        .order-info__prices-item_name Товары, 4 шт.
+        .order-info__prices-item_val 80 000 ₽
+      .order-info__prices-item
+        .order-info__prices-item_name Скидки и акции
+        .order-info__prices-item_val.orange -40 000 ₽
+      .order-info__prices-item
+        .order-info__prices-item_name Бонусы
+        .order-info__prices-item_val.orange -999 Б
+      .order-info__prices-total
+        .order-info__prices-total_name Итого
+        .order-info__prices-total_val 39 001

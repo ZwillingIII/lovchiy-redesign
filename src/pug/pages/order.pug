@@ -1,0 +1,11 @@
+extends ../layout/main.pug
+
+append variables
+  - var title = 'Оформление заказа';
+
+block content
+  main.main
+    include ../components/order/index
+
+append styles
+  +style('order.css')
