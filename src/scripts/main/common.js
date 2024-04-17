@@ -324,4 +324,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // start contacts
   // end contacts
+
+  // start vacancy
+  $('.vacancy-el__header').on('click', function (e) {
+    e.stopPropagation();
+
+    $(this).toggleClass('active');
+    $(this).parent().find('.vacancy-el__body').slideToggle(300);
+  });
+  // end vacancy
 })

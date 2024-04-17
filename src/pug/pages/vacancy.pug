@@ -1,0 +1,14 @@
+extends ../layout/main
+
+append variables
+  - var title = 'Вакансии';
+  - var bread = [ { text: 'Главная', link: '/' }, { text: 'Вакансии', link: '/section.html' } ]
+
+block content
+  main.main
+    include ../components/breadcrumbs
+    include ../components/vacancy/index
+
+append styles
+  +style('breadcrumbs.css')
+  +style('vacancy.css')

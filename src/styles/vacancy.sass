@@ -1,0 +1,114 @@
+.vacancy
+  margin-top: 30px
+  margin-bottom: 90px
+  &-filter
+    margin-top: 30px
+    &__wrap
+      display: flex
+      gap: 20px
+      @media (max-width: 900px)
+        flex-direction: column
+    &__search
+      width: 500px
+      position: relative
+      @media (max-width: 900px)
+        width: 100%
+      &-input
+        width: 100%
+        padding: 15px 15px 15px 40px
+      img
+        position: absolute
+        inset: 15px
+    .select
+      width: 300px
+      height: 50px
+      @media (max-width: 900px)
+        width: 100%
+      .selectize-input
+        height: 100%
+        font-size: 16px
+  &-el
+    margin-top: 40px
+    &__items
+      display: flex
+      flex-direction: column
+      gap: 15px
+    &__item
+      background-color: #ffffff
+    &__header
+      padding: 25px 30px
+      border: 1px solid #eaeaea
+      display: flex
+      justify-content: space-between
+      align-items: center
+      transition: all .3s
+      @media (max-width: 500px)
+        padding: 20px 10px
+      img
+        width: 20px
+        height: 20px
+        transform: rotate(180deg)
+      &.active
+        border: 1px solid #fbbc2b
+    &__title
+      &-val
+        font-weight: 600
+        font-size: 18px
+        color: #2a2a2a
+      &-data
+        display: flex
+        gap: 30px
+        margin-top: 15px
+        font-weight: 400
+        font-size: 16px
+        color: #737373
+        @media (max-width: 650px)
+          flex-direction: column
+    &__body
+      padding: 40px 30px
+      border: 1px solid #eaeaea
+      display: none
+      @media (max-width: 500px)
+        padding: 20px 10px
+    &__left
+      display: flex
+      flex-direction: column
+      gap: 30px
+      width: 70%
+      @media (max-width: 900px)
+        width: 100%
+    &__text
+      font-weight: 400
+      font-size: 16px
+      line-height: 150%
+      color: #0f0f0f
+      span
+        font-weight: 700
+    &__points
+      &-title
+        font-weight: 600
+        font-size: 18px
+        color: #0f0f0f
+      ul
+        list-style: none
+        li
+          &:before
+            content: '•'
+            color: #fbbc2b
+            padding-right: 8px
+    &__inner
+      display: flex
+      justify-content: space-between
+      gap: 20px
+      @media (max-width: 900px)
+        flex-direction: column
+        justify-content: start
+    &__contacts
+      margin-top: 25px
+      display: flex
+      flex-direction: column
+      gap: 10px
+      &-item
+        display: flex
+        gap: 12px
+        align-items: center
