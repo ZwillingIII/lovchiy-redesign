@@ -1,0 +1,54 @@
+-
+  var stocks = [
+    {
+      img: 'assets/images/other/stocks/1.png',
+      date: 'до 26 марта',
+      previewName: '-10% на воблеры',
+      link: '#'
+    },
+    {
+      img: 'assets/images/other/stocks/2.png',
+      date: '22 февраля - 10 марта',
+      previewName: 'Выгодные цены на каяки и аксессуары к ним',
+      link: '#'
+    },
+    {
+      img: 'assets/images/other/stocks/3.png',
+      date: '1-30 марта',
+      previewName: 'Весенняя распродажа',
+      link: '#'
+    },
+    {
+      img: 'assets/images/other/stocks/4.png',
+      date: '26-27 июля',
+      previewName: 'Скидки до -45% на бренд Kingdom',
+      link: '#'
+    },
+    {
+      img: 'assets/images/other/stocks/4.png',
+      date: '26-27 июля',
+      previewName: 'Скидки до -45% на бренд Kingdom',
+      link: '#'
+    },
+  ];
+
+.stocks
+  .container
+    .stocks-wrap
+      .section-top
+        .section-top__title Интересные статьи
+      .stocks-items
+        .swiper-wrapper
+          each item in stocks
+            .stocks-item.swiper-slide
+              .stocks-item__img
+                img(src=item.img)
+              .stocks-item__content
+                .stocks-item__date= item.date
+                .stocks-item__name= item.previewName
+              a.stocks-item__more Подробнее
+      .stocks-navs
+        .stocks-navs__next.swiper-button-next
+          img(src="assets/images/other/slide-next-black.svg")
+        .stocks-navs__prev.swiper-button-prev
+          img(src="assets/images/other/slide-prev-black.svg")

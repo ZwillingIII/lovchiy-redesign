@@ -1,0 +1,15 @@
+extends ../layout/main.pug
+
+append variables
+  - var title = 'Что такое стритфишинг и почему его стоит попробовать';
+  - var bread = [ { text: 'Главная', link: '/' }, { text: 'Новости', link: '/news.html' }, {text: 'Что такое стритфишинг и почему его стоит попробовать', link: '/news-detail.html'} ]
+
+block content
+  main.main
+    include ../components/breadcrumbs
+    include ../components/news-detail/index
+
+append styles
+  +style('breadcrumbs.css')
+  +style('news-detail.css')
+  +style('Stocks.css')
