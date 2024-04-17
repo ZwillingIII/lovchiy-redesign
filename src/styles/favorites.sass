@@ -1,0 +1,19 @@
+.favorites
+  margin: 40px 0 160px 0
+  &-items
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 20px
+    margin-top: 40px
+    @media (max-width: 1000px)
+      grid-template-columns: repeat(3, 1fr)
+    @media (max-width: 800px)
+      grid-template-columns: repeat(2, 1fr)
+    .product-card
+      height: 500px
+      @media (max-width: 800px)
+        height: 600px
+      @media (max-width: 550px)
+        height: 500px
+      @media (max-width: 550px)
+        height: 420px

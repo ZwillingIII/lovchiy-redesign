@@ -1,0 +1,15 @@
+extends ../layout/main
+
+append variables
+  - var title = 'Избранное';
+  - var bread = [ { text: 'Главная', link: '/' }, { text: 'Избранное', link: '/favorites.html' } ]
+
+block content
+  main.main
+    include ../components/breadcrumbs
+    include ../components/favorites/index
+
+append styles
+  +style('breadcrumbs.css')
+  +style('products.css')
+  +style('favorites.css')
