@@ -183,6 +183,7 @@ table
       svg
         path
           fill: #ff3b3b
+          stroke: #ff3b3b
   &__img
     img
       width: 100%
@@ -487,3 +488,52 @@ table
         border-bottom: 1px solid #737373
         &:hover
           border-bottom: 1px solid #e9a100
+
+.news-item
+  background-color: $white
+  border-radius: 6px
+  height: 418px
+  position: relative
+  &__img
+    width: 100%
+    img
+      width: 100%
+  &__content
+    padding: 15px
+  &__date
+    font-weight: 400
+    font-size: 14px
+    color: #737373
+  &__name
+    margin-top: 10px
+    font-weight: 600
+    font-size: 18px
+    line-height: 130%
+    color: #0f0f0f
+    @media (max-width: 1300px)
+      font-size: 14px
+  &__description
+    position: absolute
+    right: 15px
+    bottom: 20px
+    left: 15px
+    font-weight: 400
+    font-size: 16px
+    line-height: 130%
+    color: #737373
+    @media (max-width: 1300px)
+      font-size: 12px
+
+.showmore
+  margin-top: 40px
+  width: 100%
+  background-color: #ffffff
+  border: 1px solid #eaeaea
+  border-radius: 3px
+  &-wrap
+    padding: 15px 0
+    div
+      font-weight: 400
+      font-size: 16px
+      text-align: center
+      color: #0f0f0f

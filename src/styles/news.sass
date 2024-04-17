@@ -1,0 +1,30 @@
+.newspage
+  margin: 30px 0 80px 0
+  &-filter
+    margin-top: 30px
+    &__items
+      display: flex
+      gap: 10px
+      @media (max-width: 400px)
+        flex-direction: column
+    &__item
+      input
+        display: none
+        &:checked + label
+          border: 1px solid #fbbc2b
+      label
+        background-color: #ffffff
+        border: 1px solid #eaeaea
+        border-radius: 6px
+        padding: 10px 30px
+        display: inline-block
+  &-items
+    margin-top: 40px
+    &__wrap
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      gap: 20px
+      @media (max-width: 1200px)
+        grid-template-columns: repeat(3, 1fr)
+      @media (max-width: 880px)
+        grid-template-columns: repeat(2, 1fr)

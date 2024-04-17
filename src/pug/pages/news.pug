@@ -1,0 +1,14 @@
+extends ../layout/main.pug
+
+append variables
+  - var title = 'Новости';
+  - var bread = [ { text: 'Главная', link: '/' }, { text: 'Контакты', link: '/contacts.html' } ]
+
+block content
+  main.main
+    include ../components/breadcrumbs
+    include ../components/news/index
+
+append styles
+  +style('breadcrumbs.css')
+  +style('news.css')

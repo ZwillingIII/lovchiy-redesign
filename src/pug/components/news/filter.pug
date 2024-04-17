@@ -1,0 +1,23 @@
+-
+  var filterEl = [
+    {
+      text: 'Все',
+      id: 'all'
+    },
+    {
+      text: 'Новости',
+      id: 'news'
+    },
+    {
+     text: 'Статьи',
+     id: 'articles'
+    }
+  ]
+
+.newspage-filter
+  .newspage-filter__wrap
+    .newspage-filter__items
+      each item in filterEl
+        .newspage-filter__item
+          input(type='radio' name="news" id=item.id)
+          label(for=item.id)= item.text
