@@ -156,6 +156,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  const about = new Swiper('.about-slider__wrap', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.about-slider__navs-next',
+      prevEl: '.about-slider__navs-prev'
+    }
+  });
+
+  const aboutPartners = new Swiper('.about-partners__items', {
+    direction: 'horizontal',
+    slidesPerView: 2,
+    spaceBetween: 5,
+    navigation: {
+      nextEl: '.about-partners__navs-next',
+      prevEl: '.about-partners__navs-prev'
+    },
+    breakpoints: {
+      600: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      }
+    }
+  });
+
   const footerPickups = new Swiper('.footer-column__pickups-items', {
     direction: 'horizontal',
     slidesPerView: 1,

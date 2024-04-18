@@ -1,0 +1,27 @@
+-
+  var advs = [
+    {
+      title: '12 клиентов',
+      text: 'среди крупнейших в России'
+    },
+    {
+      title: '600+ заказов',
+      text: 'отправляется ежемесячно'
+    },
+    {
+      title: '500 м2',
+      text: 'выведено под склад'
+    },
+    {
+      title: '14 лет',
+      text: 'на промышленном рынке'
+    },
+  ]
+
+.about-advantages
+  .about-advantages__wrap
+    .about-advantages__items
+      each item in advs
+        .about-advantages__item
+          .about-advantages__title= item.title
+          .about-advantages__text= item.text

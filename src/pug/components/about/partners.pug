@@ -1,0 +1,25 @@
+-
+  var partners = [
+    'assets/images/other/about/p-1.png',
+    'assets/images/other/about/p-2.png',
+    'assets/images/other/about/p-3.png',
+    'assets/images/other/about/p-4.png',
+    'assets/images/other/about/p-5.png',
+    'assets/images/other/about/p-6.png',
+    'assets/images/other/about/p-1.png',
+    'assets/images/other/about/p-2.png',
+    'assets/images/other/about/p-3.png',
+  ]
+
+.about-partners
+  .about-partners__wrap
+    .about-partners__items
+      .swiper-wrapper
+        each item in partners
+          .about-partners__item.swiper-slide
+            img(src=item)
+    .about-partners__navs
+      .about-partners__navs-next.swiper-button-next
+        img(src="assets/images/other/slide-next-black.svg")
+      .about-partners__navs-prev.swiper-button-prev
+        img(src="assets/images/other/slide-prev-black.svg")

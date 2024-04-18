@@ -1,0 +1,44 @@
+-
+  var certs = [
+    {
+      img: 'assets/images/other/certs/1.png',
+      name: '«Рыболов Сервис»'
+    },
+    {
+      img: 'assets/images/other/certs/2.png',
+      name: '«Омега Тул»'
+    },
+    {
+      img: 'assets/images/other/certs/3.png',
+      name: '«Тонар»'
+    },
+    {
+      img: 'assets/images/other/certs/4.png',
+      name: '«АРГУТ»'
+    },
+    {
+      img: 'assets/images/other/certs/1.png',
+      name: '«Рыболов Сервис»'
+    },
+    {
+      img: 'assets/images/other/certs/2.png',
+      name: '«Омега Тул»'
+    },
+    {
+      img: 'assets/images/other/certs/3.png',
+      name: '«Тонар»'
+    },
+    {
+      img: 'assets/images/other/certs/4.png',
+      name: '«АРГУТ»'
+    },
+  ]
+
+.about-certs
+  .about-certs__wrap
+    h2.page-title Награды и сертификаты
+    .about-certs__items
+      each item in certs
+        .about-certs__item
+          img(src=item.img)
+          .about-certs__item-name= item.name

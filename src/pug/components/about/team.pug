@@ -1,0 +1,48 @@
+-
+  var team = [
+    {
+      name: 'Имя Фамилия',
+      post: 'Должность',
+      phone: '8 (8352) 22-41-01',
+      email: 'pochta@mail.ru',
+      img: 'assets/images/other/team/1.png'
+    },
+    {
+      name: 'Имя Фамилия',
+      post: 'Должность',
+      phone: '8 (8352) 22-41-01',
+      email: 'pochta@mail.ru',
+      img: 'assets/images/other/team/2.png'
+    },
+    {
+      name: 'Имя Фамилия',
+      post: 'Должность',
+      phone: '8 (8352) 22-41-01',
+      email: 'pochta@mail.ru',
+      img: 'assets/images/other/team/3.png'
+    },
+    {
+      name: 'Имя Фамилия',
+      post: 'Должность',
+      phone: '8 (8352) 22-41-01',
+      email: 'pochta@mail.ru',
+      img: 'assets/images/other/team/4.png'
+    },
+  ]
+
+.about-team
+  .about-wrap
+    h2.page-title Наша команда
+    .about-team__items
+      each item in team
+        .about-team__item
+          img(src=item.img)
+          .about-team__item-info
+            .about-team__item-name= item.name
+            .about-team__item-post= item.post
+            .about-team__item-info_item
+              .about-team__item-info_title Телефон
+              .about-team__item-info_val= item.phone
+            .about-team__item-info_item
+              .about-team__item-info_title Почта
+              .about-team__item-info_val= item.email
