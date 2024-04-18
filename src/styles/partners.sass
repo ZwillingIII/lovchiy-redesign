@@ -1,0 +1,56 @@
+.partners
+  margin: 40px 0 80px 0
+  &-search
+    position: relative
+    margin-top: 30px
+    img
+      position: absolute
+      inset: 15px
+    input
+      padding: 15px 15px 15px 35px
+      width: 100%
+  &-items
+    margin-top: 50px
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 50px 20px
+    @media (max-width: 1200px)
+      grid-template-columns: repeat(1, 1fr)
+  &-item
+    display: flex
+    gap: 20px
+    @media (max-width: 500px)
+      flex-direction: column
+    &__img
+      border: 1px solid #eaeaea
+      border-radius: 6px
+      min-width: 190px
+      height: 124px
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: #ffffff
+    &__info
+      max-width: 400px
+      @media (max-width: 1200px)
+        max-width: 100%
+      &-name
+        font-weight: 600
+        font-size: 18px
+        line-height: 130%
+        color: #0f0f0f
+      &-desc
+        margin-top: 10px
+        font-weight: 400
+        font-size: 14px
+        line-height: 150%
+        color: #737373
+      &-link
+        display: inline-block
+        margin-top: 15px
+        font-weight: 400
+        font-size: 16px
+        color: #737373
+        border-bottom: 1px solid #737373
+        &:hover
+          border-bottom: 1px solid #e9a100

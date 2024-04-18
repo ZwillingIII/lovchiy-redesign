@@ -1,0 +1,117 @@
+-
+  var partners = [
+    {
+      img: 'assets/images/other/about/p-1.png',
+      title: 'Normark',
+      desc: 'Дистрибьюторское подразделение корпораций RAPALA VMC Corporation и SHIMANO Inc, лидер рынка товаров для рыбалки, спорта и активного отдыха, мировых брендов: Shimano, Rapala, Bluefox, Storm, VMC, Luhr Jensen и др.',
+      link: 'normark.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-2.png',
+      title: 'Moscanela',
+      desc: 'Эксклюзивный поставщик продукции Pontoon 21, крючков Owner',
+      link: 'moscanella.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-1.png',
+      title: 'Normark',
+      desc: 'Дистрибьюторское подразделение корпораций RAPALA VMC Corporation и SHIMANO Inc, лидер рынка товаров для рыбалки, спорта и активного отдыха, мировых брендов: Shimano, Rapala, Bluefox, Storm, VMC, Luhr Jensen и др.',
+      link: 'normark.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-2.png',
+      title: 'Moscanela',
+      desc: 'Эксклюзивный поставщик продукции Pontoon 21, крючков Owner',
+      link: 'moscanella.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-1.png',
+      title: 'Normark',
+      desc: 'Дистрибьюторское подразделение корпораций RAPALA VMC Corporation и SHIMANO Inc, лидер рынка товаров для рыбалки, спорта и активного отдыха, мировых брендов: Shimano, Rapala, Bluefox, Storm, VMC, Luhr Jensen и др.',
+      link: 'normark.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-2.png',
+      title: 'Moscanela',
+      desc: 'Эксклюзивный поставщик продукции Pontoon 21, крючков Owner',
+      link: 'moscanella.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-1.png',
+      title: 'Normark',
+      desc: 'Дистрибьюторское подразделение корпораций RAPALA VMC Corporation и SHIMANO Inc, лидер рынка товаров для рыбалки, спорта и активного отдыха, мировых брендов: Shimano, Rapala, Bluefox, Storm, VMC, Luhr Jensen и др.',
+      link: 'normark.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-2.png',
+      title: 'Moscanela',
+      desc: 'Эксклюзивный поставщик продукции Pontoon 21, крючков Owner',
+      link: 'moscanella.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-1.png',
+      title: 'Normark',
+      desc: 'Дистрибьюторское подразделение корпораций RAPALA VMC Corporation и SHIMANO Inc, лидер рынка товаров для рыбалки, спорта и активного отдыха, мировых брендов: Shimano, Rapala, Bluefox, Storm, VMC, Luhr Jensen и др.',
+      link: 'normark.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-2.png',
+      title: 'Moscanela',
+      desc: 'Эксклюзивный поставщик продукции Pontoon 21, крючков Owner',
+      link: 'moscanella.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-1.png',
+      title: 'Normark',
+      desc: 'Дистрибьюторское подразделение корпораций RAPALA VMC Corporation и SHIMANO Inc, лидер рынка товаров для рыбалки, спорта и активного отдыха, мировых брендов: Shimano, Rapala, Bluefox, Storm, VMC, Luhr Jensen и др.',
+      link: 'normark.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-2.png',
+      title: 'Moscanela',
+      desc: 'Эксклюзивный поставщик продукции Pontoon 21, крючков Owner',
+      link: 'moscanella.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-1.png',
+      title: 'Normark',
+      desc: 'Дистрибьюторское подразделение корпораций RAPALA VMC Corporation и SHIMANO Inc, лидер рынка товаров для рыбалки, спорта и активного отдыха, мировых брендов: Shimano, Rapala, Bluefox, Storm, VMC, Luhr Jensen и др.',
+      link: 'normark.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-2.png',
+      title: 'Moscanela',
+      desc: 'Эксклюзивный поставщик продукции Pontoon 21, крючков Owner',
+      link: 'moscanella.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-1.png',
+      title: 'Normark',
+      desc: 'Дистрибьюторское подразделение корпораций RAPALA VMC Corporation и SHIMANO Inc, лидер рынка товаров для рыбалки, спорта и активного отдыха, мировых брендов: Shimano, Rapala, Bluefox, Storm, VMC, Luhr Jensen и др.',
+      link: 'normark.ru'
+    },
+    {
+      img: 'assets/images/other/about/p-2.png',
+      title: 'Moscanela',
+      desc: 'Эксклюзивный поставщик продукции Pontoon 21, крючков Owner',
+      link: 'moscanella.ru'
+    },
+  ]
+
+.partners
+  .container
+    .partners-wrap
+      h2.page-title Наши партнеры
+      .partners-search
+        img(src="assets/images/other/input-search.svg")
+        input.custom-input(placeholder="Поиск партнёра")
+      .partners-items
+        each item in partners
+          .partners-item
+            .partners-item__img
+              img(src=item.img)
+            .partners-item__info
+              .partners-item__info-name= item.title
+              .partners-item__info-desc= item.desc
+              a.partners-item__info-link= item.link
+      include ../showmore-btn
