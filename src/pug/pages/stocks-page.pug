@@ -1,0 +1,15 @@
+extends ../layout/main
+
+append variables
+  - var title = 'Акции';
+  - var bread = [ { text: 'Главная', link: '/' }, { text: 'Акции', link: '/stocks-page.html' } ]
+
+block content
+  main.main
+    include ../components/breadcrumbs
+    include ../components/stock-page/index
+
+append styles
+  +style('breadcrumbs.css')
+  +style('stock-page.css')
+  +style('Stocks.css')
