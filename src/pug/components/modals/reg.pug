@@ -1,0 +1,31 @@
+#modal-auth.modal.vertical-scroll
+  .modal-content
+    .modal-close
+      svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+        path(d="M3 3L13 13M13 3L3 13" stroke="#9E9E9E" stroke-width="2" stroke-linecap="round")
+    .modal-title #[span Вход /] Регистрация
+    form
+      .modal-inputs
+        label.modal-input
+          span Фамилия
+          input.custom-input(type='text' placeholder='Фамилия')
+        label.modal-input
+          span Имя
+          input.custom-input(type='text' placeholder='Имя')
+        label.modal-input
+          span Телефон
+          input.custom-input(type='text' placeholder='Телефон')
+        label.modal-input
+          span Ваша почта
+          input.custom-input(type='text' placeholder='E-mail')
+        label.modal-input
+          span Пароль
+          input.custom-input(type='text' placeholder='Пароль')
+        label.modal-input
+          span Повторите пароль
+          input.custom-input(type='text' placeholder='Повторите пароль')
+      button.btn.modal-btn(type='submit') Войти
+      label.custom-checkbox.modal-checkbox
+        input(type='checkbox')
+        span
+        span Принимаю условия #[a.orange-text Публичной оферты]

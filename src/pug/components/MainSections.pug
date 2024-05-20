@@ -54,13 +54,12 @@
     .container
         .main-sections__wrap
             .main-sections__items
-              .swiper-wrapper
                 each section in sections
-                    .main-sections__item.swiper-slide
+                    .main-sections__item
                         img(src=section.img)
                         .main-sections__item-name= section.title
-            .main-sections__navs
-                .main-sections__prev.swiper-button-prev
-                    img(src="assets/images/other/slide-prev-black.svg")
-                .main-sections__next.swiper-button-next
-                    img(src="assets/images/other/slide-next-black.svg")
+            //.main-sections__navs
+            //    .main-sections__prev.swiper-button-prev
+            //        img(src="assets/images/other/slide-prev-black.svg")
+            //    .main-sections__next.swiper-button-next
+            //        img(src="assets/images/other/slide-next-black.svg")

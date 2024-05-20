@@ -34,7 +34,45 @@ async function initMap() {
 
 initMap();
 
+function openSuccess(modalID, title, text = '') {
+  const bg = $('.bg');
+  const modal = $('#'+modalID);
+  const modalTitle = modal.find('.modal-title');
+  const modalText = modal.find('modal-text');
+
+  if (modalTitle) {
+    modalTitle.text(title);
+  }
+
+  if (modalText) {
+    modalText.text(text);
+  }
+
+  bg.addClass('active');
+  modal.addClass('active');
+}
+
+function closeModals() {
+  const bg = $('.bg');
+  const activeModal = $('.modal.active');
+
+  bg.removeClass('active');
+  activeModal.removeClass('active');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+  $('.btn').on('click', function() {
+    openSuccess('modal-result', 'Товар в корзине');
+  });
+
+  $(document).on('click', '.bg', function() {
+    closeModals();
+  });
+
+  $(document).on('click', '.modal-close', function() {
+    closeModals();
+  });
+
   const detailBitPag = new Swiper('.catalog-detail__img-pagination_items', {
     direction: 'horizontal',
     spaceBetween: 10,

@@ -1,10 +1,14 @@
 .header
-  @media(max-width: 1300px)
+  @media(max-width: 1000px)
     display: none
+  &-logo
+    @media (max-width: 1300px)
+      img
+        width: 80px
   &-mobil
     display: none
     background-color: #ffffff
-    @media(max-width: 1300px)
+    @media(max-width: 1000px)
       display: block
     &__wrap
       padding: 26px 0
@@ -110,6 +114,8 @@
         position: absolute
         top: -5px
         right: -10px
+        width: 22px
+        height: 22px
     &__right
       display: flex
       gap: 22px
@@ -138,6 +144,8 @@
       width: 530px
       border-radius: 3px
       border: 1px solid #d1d2d4
+      @media (max-width: 1300px)
+        width: 300px
     &-btn
       position: absolute
       right: 0
